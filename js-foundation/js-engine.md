@@ -1,4 +1,5 @@
 **JavaScript Engine**
+
 Computer does not really know what "JS" is.
 
 JavaScript files goes to JS engine(s) and this engine understands what to do and send it to the computer.
@@ -6,6 +7,7 @@ JavaScript files goes to JS engine(s) and this engine understands what to do and
 List of [ECMAScript engines](https://en.wikipedia.org/wiki/List_of_ECMAScript_engines)
 
 **How JavaScript Engine Works**
+
 <img src="../img/js-foundation-js-engine-001.png"
      alt="How JS Engine Works"
      style="width: 400px; height: 400px margin: 0 auto;" />
