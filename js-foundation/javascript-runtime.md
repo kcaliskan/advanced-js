@@ -37,3 +37,9 @@
 <img src="../img/js-foundation-node-runtime-003.png"
      alt="JavaScript Runtime"
      style="width: 400px; height: 400px margin: 0 auto;" />
+
+**Sources**
+
+1. [How JavaScript works in browser and node? ](https://itnext.io/how-javascript-works-in-browser-and-node-ab7d0d09ac2f)
+
+2. [Loupe](http://latentflip.com/loupe/?code=ZnVuY3Rpb24gcHJpbnRIZWxsbygpIHsNCiAgICBjb25zb2xlLmxvZygnSGVsbG8gZnJvbSBiYXonKTsNCn0NCg0KZnVuY3Rpb24gYmF6KCkgew0KICAgIHNldFRpbWVvdXQocHJpbnRIZWxsbywgMzAwMCk7DQp9DQoNCmZ1bmN0aW9uIGJhcigpIHsNCiAgICBiYXooKTsNCn0NCg0KZnVuY3Rpb24gZm9vKCkgew0KICAgIGJhcigpOw0KfQ0KDQpmb28oKTs%3D!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D)
