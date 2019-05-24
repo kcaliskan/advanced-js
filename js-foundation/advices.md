@@ -1,0 +1,19 @@
+## Advices About Studying
+
+**How to approach a problem**
+
+1. So here’s what your workflow should look like: find a problem, and try to solve it (repl.it is often your friend here). If you can’t solve it within 30 minutes, then just look at the solution. Whether you solve it or not, read the best solution and try to parse it. It will often be kind of mysterious and use methods that you don’t know. Go look up those methods in the documentation, play around with them, make sure you understand what they do and why the solution works. Make sure you get it.
+
+This next step is essential. Now do the problem again and try to re-implement the ideal solution that you just read. Do it from memory. If you forget, go back and look at the solution, and then start over. DON’T SKIP THIS STEP FOR ANY PROBLEM, NO MATTER HOW SMALL.
+
+(Haseeb)[https://haseebq.com/cracking-the-coding-bootcamp-the-definitive-guide/]
+
+2. For code/algorithms problems, you very much want to maximize the density of learning per hour.
+
+Any time you look up the answer to a coding problem, try to understand the solution. Walk through it with a debugger if it’s particularly mysterious. Read multiple explanations of why it works.
+
+Then—and this is extremely important—if you didn’t solve the problem completely on your own, treat the problem as though you never solved it at all. Put it back into your rotation of problems. Mark it as something you need to try again from scratch. Wait at least a day, and try to solve it fresh. If you fail, rinse and repeat ad infinitum.
+
+(Hasseb)[https://haseebq.com/how-to-break-into-tech-job-hunting-and-interviews/#part1]
+
+3.
