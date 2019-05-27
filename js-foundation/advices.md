@@ -17,3 +17,7 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 (Hasseb)[https://haseebq.com/how-to-break-into-tech-job-hunting-and-interviews/#part1]
 
 3.
+
+## Job Platforms
+
+1. TripleByte, WhiteTruffle, Hired.
