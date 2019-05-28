@@ -21,3 +21,7 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 ## Job Platforms
 
 1. TripleByte, WhiteTruffle, Hired.
+
+## Technical Podcasts
+
+(Software Engineering Daily)[http://softwareengineeringdaily.com/category/podcast/] , (The Bike Shed)[http://bikeshed.fm/]
