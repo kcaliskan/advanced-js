@@ -25,3 +25,7 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 ## Technical Podcasts
 
 [Software Engineering Daily](http://softwareengineeringdaily.com/category/podcast/) , [The Bike Shed](http://bikeshed.fm/)
+
+## Youtubers
+
+1. [TechLead](https://www.youtube.com/channel/UC4xKdmAXFh4ACyhpiQ_3qBw/videos)
