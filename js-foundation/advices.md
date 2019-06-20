@@ -34,3 +34,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 4. [Tech with Tim](https://www.youtube.com/channel/UC4JX40jDee_tINbkjycV4Sg/videos)
 5. [The Net Ninja](https://www.youtube.com/channel/UCW5YeuERMmlnqo4oq8vwUpg/videos)
 6. [Null Byte](https://www.youtube.com/channel/UCgTNupxATBfWmfehv21ym-g/videos)
+7. [Traversy Media](https://www.youtube.com/user/TechGuyWeb/videos)
