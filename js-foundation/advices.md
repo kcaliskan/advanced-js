@@ -37,3 +37,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 7. [Traversy Media](https://www.youtube.com/user/TechGuyWeb/videos)
 8. [Dev Ed](https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q/videos)
 9. [Taeha Types](https://www.youtube.com/user/FeelgHoodMusic/videos)
+10. [Siraj Raval](https://www.youtube.com/channel/UCWN3xxRkmTPmbKwht9FuE5A/videos)
