@@ -41,3 +41,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 11. [Hungry Turtle Code](https://www.youtube.com/channel/UC7Vxnf06GP6w42Lg3TQLXSw/videos)
 12. [Fireship](https://www.youtube.com/channel/UCsBjURrPoezykLs9EqgamOA/videos)
 13. [Turbo 360](https://www.youtube.com/channel/UCf5CgGVs6zEq6DUtyFw9e-Q/videos)
+14. [Classsed](https://www.youtube.com/channel/UC2-slOJImuSc20Drbf88qvg/videos)
