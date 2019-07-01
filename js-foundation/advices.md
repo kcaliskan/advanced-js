@@ -43,3 +43,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 13. [Turbo 360](https://www.youtube.com/channel/UCf5CgGVs6zEq6DUtyFw9e-Q/videos)
 14. [Classsed](https://www.youtube.com/channel/UC2-slOJImuSc20Drbf88qvg/videos)
 15. [Kalle Halden](https://www.youtube.com/channel/UCWr0mx597DnSGLFk1WfvSkQ/videos)
+16. [Joshua Fluke](https://www.youtube.com/channel/UC-91UA-Xy2Cvb98deRXuggA)
