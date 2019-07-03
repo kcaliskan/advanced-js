@@ -45,3 +45,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 15. [Kalle Halden](https://www.youtube.com/channel/UCWr0mx597DnSGLFk1WfvSkQ/videos)
 16. [Joshua Fluke](https://www.youtube.com/channel/UC-91UA-Xy2Cvb98deRXuggA)
 17. [techsit](https://www.youtube.com/user/techSithTube/videos)
+18. [Fun Fun Function](https://www.youtube.com/channel/UCO1cgjhGzsSYb1rsB4bFe4Q/videos)
