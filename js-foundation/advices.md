@@ -50,3 +50,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 20. [Andy Sterkowitz](https://www.youtube.com/channel/UCZ9qFEC82qM6Pk-54Q4TVWA/videos)
 21. [Imtiaz Ahmad](https://www.youtube.com/channel/UCu4mLxrAkMEcjK9N1yJOxyA/videos)
 22. [Code Drip](https://www.youtube.com/channel/UCRLEADhMcb8WUdnQ5_Alk7g/videos)
+23. [Gyasi Linje](https://www.youtube.com/user/ASEgG100/videos)
