@@ -52,3 +52,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 22. [Code Drip](https://www.youtube.com/channel/UCRLEADhMcb8WUdnQ5_Alk7g/videos)
 23. [Gyasi Linje](https://www.youtube.com/user/ASEgG100/videos)
 24. [Devon Crawford](https://www.youtube.com/channel/UCDrekHmOnkptxq3gUU0IyfA/videos)
+25. [freeCodeCamp](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ/videos)
