@@ -54,3 +54,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 24. [Devon Crawford](https://www.youtube.com/channel/UCDrekHmOnkptxq3gUU0IyfA/videos)
 25. [freeCodeCamp](https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ/videos)
 26. [Chris Jereza](https://www.youtube.com/channel/UCPrRsdgsxOmzr9ykAf7tlDw/videos)
+27. [mayuko](https://www.youtube.com/channel/UCPrRsdgsxOmzr9ykAf7tlDw/videos)
