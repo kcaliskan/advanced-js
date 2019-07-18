@@ -56,3 +56,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 26. [Chris Jereza](https://www.youtube.com/channel/UCPrRsdgsxOmzr9ykAf7tlDw/videos)
 27. [mayuko](https://www.youtube.com/channel/UCPrRsdgsxOmzr9ykAf7tlDw/videos)
 28. [interviewing.io](https://www.youtube.com/channel/UCNc-Wa_ZNBAGzFkYbAHw9eg/videos)
+29. [ENGINEERED TRUTH](https://www.youtube.com/user/EngineeredTruth/videos)
