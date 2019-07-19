@@ -57,3 +57,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 27. [mayuko](https://www.youtube.com/channel/UCPrRsdgsxOmzr9ykAf7tlDw/videos)
 28. [interviewing.io](https://www.youtube.com/channel/UCNc-Wa_ZNBAGzFkYbAHw9eg/videos)
 29. [ENGINEERED TRUTH](https://www.youtube.com/user/EngineeredTruth/videos)
+30. [Simple Programmer](https://www.youtube.com/channel/UCRxWW_Ncs308nW4An23Yeig/videos)
