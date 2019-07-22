@@ -59,3 +59,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 29. [ENGINEERED TRUTH](https://www.youtube.com/user/EngineeredTruth/videos)
 30. [Simple Programmer](https://www.youtube.com/channel/UCRxWW_Ncs308nW4An23Yeig/videos)
 31. [Life of Luba](https://www.youtube.com/channel/UCgzKCeDYLRzPhQ64R6AKyBQ/videos)
+32. [Life of Chris](https://www.youtube.com/channel/UCZK342wTA_SWiNaqa3KjjDA/videos)
