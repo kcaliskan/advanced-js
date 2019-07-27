@@ -62,3 +62,5 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 32. [Life of Chris](https://www.youtube.com/channel/UCZK342wTA_SWiNaqa3KjjDA/videos)
 33. [Clément Mihailescu](https://www.youtube.com/channel/UCaO6VoaYJv4kS-TQO_M-N_g/videos)
 34. [CS164](https://www.youtube.com/user/compsci164/videos)
+35. [CS164](https://www.youtube.com/channel/UCYnDDv8EZS7UdLLeqssxYuw/videos)
+
