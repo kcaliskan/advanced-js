@@ -64,4 +64,5 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 34. [CS164](https://www.youtube.com/user/compsci164/videos)
 35. [Tony Cassara](https://www.youtube.com/channel/UCYnDDv8EZS7UdLLeqssxYuw/videos)
 36. [Lets Build That App](https://www.youtube.com/watch?v=WRAAMMycrNM)
-37. [CS Dojo](hhttps://www.youtube.com/channel/UCxX9wt5FWQUAAz4UrysqK9A)
+37. [CS Dojo](https://www.youtube.com/channel/UCxX9wt5FWQUAAz4UrysqK9A)
+38. [Jabrils](https://www.youtube.com/channel/UCQALLeQPoZdZC4JNUboVEUg/videos)
