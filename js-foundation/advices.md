@@ -66,3 +66,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 36. [Lets Build That App](https://www.youtube.com/watch?v=WRAAMMycrNM)
 37. [CS Dojo](https://www.youtube.com/channel/UCxX9wt5FWQUAAz4UrysqK9A)
 38. [Jabrils](https://www.youtube.com/channel/UCQALLeQPoZdZC4JNUboVEUg/videos)
+39. [Y Combinator](https://www.youtube.com/channel/UCcefcZRL2oaA_uBNeo5UOWg/videos)
