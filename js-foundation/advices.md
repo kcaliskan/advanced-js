@@ -69,3 +69,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 39. [Y Combinator](https://www.youtube.com/channel/UCcefcZRL2oaA_uBNeo5UOWg/videos)
 40. [CS50](https://www.youtube.com/user/cs50tv/videos)
 41. [Back To Back SWE](https://www.youtube.com/channel/UCmJz2DV1a3yfgrR7GqRtUUA/videos)
+42. [Clever Programmer](https://www.youtube.com/channel/UCqrILQNl5Ed9Dz6CGMyvMTQ/videos)
