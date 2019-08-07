@@ -71,3 +71,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 41. [Back To Back SWE](https://www.youtube.com/channel/UCmJz2DV1a3yfgrR7GqRtUUA/videos)
 42. [Clever Programmer](https://www.youtube.com/channel/UCqrILQNl5Ed9Dz6CGMyvMTQ/videos)
 43. [Tony Cassara](https://www.youtube.com/channel/UCYnDDv8EZS7UdLLeqssxYuw/videos)
+44. [Jake Wright](https://www.youtube.com/user/jaketvee/videos)
