@@ -72,3 +72,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 42. [Clever Programmer](https://www.youtube.com/channel/UCqrILQNl5Ed9Dz6CGMyvMTQ/videos)
 43. [Tony Cassara](https://www.youtube.com/channel/UCYnDDv8EZS7UdLLeqssxYuw/videos)
 44. [Jake Wright](https://www.youtube.com/user/jaketvee/videos)
+45. [Success in Tech](https://www.youtube.com/channel/UC-vYrOAmtrx9sBzJAf3x_xw/videos)
