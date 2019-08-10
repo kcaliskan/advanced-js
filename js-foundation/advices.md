@@ -74,3 +74,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 44. [Jake Wright](https://www.youtube.com/user/jaketvee/videos)
 45. [Success in Tech](https://www.youtube.com/channel/UC-vYrOAmtrx9sBzJAf3x_xw/videos)
 46. [Gaurav Sen](https://www.youtube.com/channel/UCRPMAqdtSgd0Ipeef7iFsKw/videos)
+47. [abrar](https://www.youtube.com/channel/UCAjsH3UCJrd-xAfUBsB-dOg/videos)
