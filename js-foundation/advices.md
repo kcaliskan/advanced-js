@@ -75,3 +75,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 45. [Success in Tech](https://www.youtube.com/channel/UC-vYrOAmtrx9sBzJAf3x_xw/videos)
 46. [Gaurav Sen](https://www.youtube.com/channel/UCRPMAqdtSgd0Ipeef7iFsKw/videos)
 47. [abrar](https://www.youtube.com/channel/UCAjsH3UCJrd-xAfUBsB-dOg/videos)
+48. [Tushar Roy - Coding Made Simple](https://www.youtube.com/user/tusharroy2525/videos)
