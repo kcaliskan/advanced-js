@@ -76,3 +76,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 46. [Gaurav Sen](https://www.youtube.com/channel/UCRPMAqdtSgd0Ipeef7iFsKw/videos)
 47. [abrar](https://www.youtube.com/channel/UCAjsH3UCJrd-xAfUBsB-dOg/videos)
 48. [Tushar Roy - Coding Made Simple](https://www.youtube.com/user/tusharroy2525/videos)
+49. [Academind](https://www.youtube.com/channel/UCSJbGtTlrDami-tDGPUV9-w/videos)
