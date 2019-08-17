@@ -79,3 +79,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 49. [Academind](https://www.youtube.com/channel/UCSJbGtTlrDami-tDGPUV9-w/videos)
 50. [Byte By Byte](https://www.youtube.com/channel/UCWSYAntBbdd2SLYUqPIxo0w/videos)
 51. [Tech Dummies - Narendra L](https://www.youtube.com/channel/UCn1XnDWhsLS5URXTi5wtFTA/videos)
+52. [Dylan Israel](https://www.youtube.com/user/pizzapokerguy87/videos)
