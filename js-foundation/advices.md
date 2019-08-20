@@ -82,3 +82,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 52. [Dylan Israel](https://www.youtube.com/user/pizzapokerguy87/videos)
 53. [codedamn](https://www.youtube.com/channel/UCJUmE61LxhbhudzUugHL2wQ/videos)
 54. [Coding Tech](https://www.youtube.com/channel/UCtxCXg-UvSnTKPOzLH4wJaQ/videos)
+55. [Programming with Mosh](https://www.youtube.com/user/programmingwithmosh/videos)
