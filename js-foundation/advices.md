@@ -84,3 +84,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 54. [Coding Tech](https://www.youtube.com/channel/UCtxCXg-UvSnTKPOzLH4wJaQ/videos)
 55. [Programming with Mosh](https://www.youtube.com/user/programmingwithmosh/videos)
 56. [Program With Erik](https://www.youtube.com/channel/UCshZ3rdoCLjDYuTR_RBubzw/videos)
+57. [EvilTester - Software Testing](https://www.youtube.com/user/EviltesterVideos/videos)
