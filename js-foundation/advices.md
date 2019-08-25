@@ -87,3 +87,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 57. [EvilTester - Software Testing](https://www.youtube.com/user/EviltesterVideos/videos)
 58. [Steve Griffith](https://www.youtube.com/channel/UCTBGXCJHORQjivtgtMsmkAQ/videos)
 59. [Akshay Saini](https://www.youtube.com/channel/UC3N9i_KvKZYP4F84FPIzgPQ/videos)
+60. [CodingPhase](https://www.youtube.com/channel/UC46wWUso9H5KPQcoL9iE3Ug/videos)
