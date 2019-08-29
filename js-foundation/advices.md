@@ -91,3 +91,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 61. [The Coding Train](https://www.youtube.com/user/shiffman/videos)
 62. [Fredrik Christenson](https://www.youtube.com/user/Fidde12345/videos)
 63. [Jesse Weigel](https://www.youtube.com/user/JesseandBek/videos)
+64. [Red Stapler](https://www.youtube.com/channel/UCRthRrv06q1iOl86-tTKJhg/videos)
