@@ -95,3 +95,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 65. [SoulEncoded](https://www.youtube.com/channel/UCiZotp9tZ4uXgXEjHDUYzBQ/videos)
 66. [Rachit Jain](https://www.youtube.com/channel/UC9fDC_eBh9e_bogw87DbGKQ/videos)
 67. [Springboard](https://www.youtube.com/channel/UCqd6TofKNjqagInm5Waeu7w/videos)
+68. [DesignCourse](https://www.youtube.com/user/DesignCourse/videos)
