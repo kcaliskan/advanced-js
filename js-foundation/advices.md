@@ -96,3 +96,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 66. [Rachit Jain](https://www.youtube.com/channel/UC9fDC_eBh9e_bogw87DbGKQ/videos)
 67. [Springboard](https://www.youtube.com/channel/UCqd6TofKNjqagInm5Waeu7w/videos)
 68. [DesignCourse](https://www.youtube.com/user/DesignCourse/videos)
+69. [Aaron in Beta](https://www.youtube.com/channel/UCXym52jGe7cb5deJRWM3paw/videos)
