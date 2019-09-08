@@ -100,3 +100,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 70. [Chris Sean](https://www.youtube.com/channel/UCu1xbgCV5o48h_BYCQD7KJg/videos)
 71. [RealToughCandy](https://www.youtube.com/channel/UC54NcJvLCvM2CNaBjd5j6HA/videos)
 72. [Jesse Showalter](https://www.youtube.com/user/JesseAtomic/videos)
+73. [Joey Bronner](https://www.youtube.com/user/yeojbro/videos)
