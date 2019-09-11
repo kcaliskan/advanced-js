@@ -20,7 +20,7 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 
 ## Job Platforms
 
-1. TripleByte, WhiteTruffle, Hired, LinkedIn.
+1. TripleByte, WhiteTruffle, Hired, LinkedIn, The Muse.
 
 ## Technical Podcasts
 
