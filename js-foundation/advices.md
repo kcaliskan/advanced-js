@@ -103,3 +103,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 73. [Joey Bronner](https://www.youtube.com/user/yeojbro/videos)
 74. [Mike Locke](https://www.youtube.com/user/mlwebco/videos)
 75. [Kevin Naughton Jr.](https://www.youtube.com/channel/UCKvwPt6BifPP54yzH99ff1g/videos)
+76. [tutoriaLinux](https://www.youtube.com/channel/UCvA_wgsX6eFAOXI8Rbg_WiQ/videos)
