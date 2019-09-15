@@ -105,3 +105,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 75. [Kevin Naughton Jr.](https://www.youtube.com/channel/UCKvwPt6BifPP54yzH99ff1g/videos)
 76. [tutoriaLinux](https://www.youtube.com/channel/UCvA_wgsX6eFAOXI8Rbg_WiQ/videos)
 77. [whatsdev](https://www.youtube.com/channel/UC0tRdbXVDbhaRvZPKsRgmxg/videos)
+78. [KodingKevin](https://www.youtube.com/channel/UCXpGqiSd3BD0FQ9OP3ziFsw/videos)
