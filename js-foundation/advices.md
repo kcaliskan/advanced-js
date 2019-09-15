@@ -106,3 +106,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 76. [tutoriaLinux](https://www.youtube.com/channel/UCvA_wgsX6eFAOXI8Rbg_WiQ/videos)
 77. [whatsdev](https://www.youtube.com/channel/UC0tRdbXVDbhaRvZPKsRgmxg/videos)
 78. [KodingKevin](https://www.youtube.com/channel/UCXpGqiSd3BD0FQ9OP3ziFsw/videos)
+79. [Wayne Jackson Jr.](https://www.youtube.com/channel/UCYJEQ18qiYUqB7xM3tWsU7g/videos)
