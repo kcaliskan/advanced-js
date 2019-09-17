@@ -108,3 +108,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 78. [KodingKevin](https://www.youtube.com/channel/UCXpGqiSd3BD0FQ9OP3ziFsw/videos)
 79. [Wayne Jackson Jr.](https://www.youtube.com/channel/UCYJEQ18qiYUqB7xM3tWsU7g/videos)
 80. [Keep On Coding](https://www.youtube.com/user/samtheman2002/videos)
+81. [Nick White](https://www.youtube.com/channel/UC1fLEeYICmo3O9cUsqIi7HA/videos)
