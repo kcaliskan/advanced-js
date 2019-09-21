@@ -112,3 +112,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 82. [Telusko](https://www.youtube.com/user/javaboynavin/videos)
 83. [Matt Upham](https://www.youtube.com/channel/UCARXVHuf1Ca_PfPPpX1SjSw/videos)
 84. [Holistic Developer](https://www.youtube.com/channel/UCD6bHzIZCJJcJD6QHGUIyrw/videos)
+85. [Jean Rauwers](https://www.youtube.com/user/jeanrauwers/videos)
