@@ -114,3 +114,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 84. [Holistic Developer](https://www.youtube.com/channel/UCD6bHzIZCJJcJD6QHGUIyrw/videos)
 85. [Jean Rauwers](https://www.youtube.com/user/jeanrauwers/videos)
 86. [TiffInTech](https://www.youtube.com/user/charnelle6/videos)
+87. [David Byttow](https://www.youtube.com/user/guitardave24/videos)
