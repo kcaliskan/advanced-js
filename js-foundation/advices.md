@@ -116,3 +116,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 86. [TiffInTech](https://www.youtube.com/user/charnelle6/videos)
 87. [David Byttow](https://www.youtube.com/user/guitardave24/videos)
 88. [Coding Blonde](https://www.youtube.com/channel/UCjdRbKZ494DfZ4zeX19rICw/videos)
+88. [blondiebytes](https://www.youtube.com/channel/UC4DwZ2VXM2KWtzHjVk9M_xg/featured)
