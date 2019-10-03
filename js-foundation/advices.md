@@ -1,6 +1,6 @@
-## Advices About Studying
+# Advices About Studying
 
-**How to approach a problem**
+## How to approach a problem
 
 1. So here’s what your workflow should look like: find a problem, and try to solve it (repl.it is often your friend here). If you can’t solve it within 30 minutes, then just look at the solution. Whether you solve it or not, read the best solution and try to parse it. It will often be kind of mysterious and use methods that you don’t know. Go look up those methods in the documentation, play around with them, make sure you understand what they do and why the solution works. Make sure you get it.
 

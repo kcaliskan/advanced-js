@@ -19,3 +19,7 @@ var c = 1;
 **setInterval**
 
 1. setInterval where we have the setInterval function that does something and inside of here we satart referencing objects and these objects in here are going to will never be collected by the garbage collector because of this setInterval unless we clear it and stop it is going to keep running and running and running.
+
+**Articles**
+
+1. [Garbage Collection in Redux Applications](https://developers.soundcloud.com/blog/garbage-collection-in-redux-applications)

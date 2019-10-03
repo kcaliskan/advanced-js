@@ -34,7 +34,7 @@
 
 **Node Runtime**
 
-<img src="../img/js-foundation-node-runtime-003.png"
+<img src="../img/js-foundation-node-runtime-003.jpg"
      alt="JavaScript Runtime"
      style="width: 400px; height: 400px margin: 0 auto;" />
 
@@ -43,3 +43,11 @@
 1. [How JavaScript works in browser and node? ](https://itnext.io/how-javascript-works-in-browser-and-node-ab7d0d09ac2f)
 
 2. [Loupe](http://latentflip.com/loupe/?code=ZnVuY3Rpb24gcHJpbnRIZWxsbygpIHsNCiAgICBjb25zb2xlLmxvZygnSGVsbG8gZnJvbSBiYXonKTsNCn0NCg0KZnVuY3Rpb24gYmF6KCkgew0KICAgIHNldFRpbWVvdXQocHJpbnRIZWxsbywgMzAwMCk7DQp9DQoNCmZ1bmN0aW9uIGJhcigpIHsNCiAgICBiYXooKTsNCn0NCg0KZnVuY3Rpb24gZm9vKCkgew0KICAgIGJhcigpOw0KfQ0KDQpmb28oKTs%3D!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D)
+
+3. [Understanding How the Chrome V8 Engine Translates JavaScript into Machine Code](https://www.freecodecamp.org/news/understanding-the-core-of-nodejs-the-powerful-chrome-v8-engine-79e7eb8af964/)
+
+4. [How JavaScript works: an overview of the engine, the runtime, and the call stack](hhttps://blog.sessionstack.com/how-does-javascript-actually-work-part-1-b0bacc073cf)
+
+5. [How JavaScript works: inside the V8 engine + 5 tips on how to write optimized code](https://blog.sessionstack.com/how-javascript-works-inside-the-v8-engine-5-tips-on-how-to-write-optimized-code-ac089e62b12e)
+
+6. [Launching Ignition and TurboFan](https://v8.dev/blog/launching-ignition-and-turbofan)
