@@ -120,3 +120,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 90. [Rachit Jain](https://www.youtube.com/channel/UC9fDC_eBh9e_bogw87DbGKQ/videos)
 91. [Jason Humphrey](https://www.youtube.com/channel/UCGiy8wPL_wmyiPQbYlhdrUw/videos)
 92. [The Cyber Mentor](https://www.youtube.com/channel/UC0ArlFuFYMpEewyRBzdLHiw/videos)
+93. [Tyler McGinnis](https://www.youtube.com/user/irideabanana/videos)
