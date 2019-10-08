@@ -29,11 +29,14 @@ Hoisting is the behavior of moving the variables or function declarations to the
 
 4. Overwrite:
 
+```
 var one = 1;
 var one = 2;
+```
 
 The very last line was to assign. Second (last one) overwrites to first one.
 
+```
 a()
 
 function a(){
@@ -43,6 +46,7 @@ console.log('hi);
 funcion a(){
 console.log('bye);
 }
+```
 
 "Bye" one will be assigned to memory. When we invoke the function, the second one(which already overwrite the first one) will run.
 
@@ -70,16 +74,28 @@ console.log('bye);
 **Function Expression**\
 This function is defined at runtime. When we actually run the function or call the function or execute the function or innoke the function.
 
-`var canada = () => { console.log('cold'); }`
+```
+var canada = () => {
+  console.log('cold');
+  }
+```
 
 or
 
-`var canada = function(){console.log('cold);}`
+```
+var canada = function(){
+  console.log('cold);
+  }
+```
 
 **Function Decleration**\
 This function gets defined at parse time. That is when the compiler initially looks at the code and starts hoisting and allocating memory.
 
-`function india(){ console.log('warm'); }`
+```
+function india(){
+  console.log('warm');
+  }
+```
 
 **Function Invocation / Call / Execution**\
 canada();\
@@ -180,17 +196,18 @@ function weird(){
   height = 50;
   return height;
 }
+```
 
 This function will return "50". Because early version of the JS was allow us to use undeclared variables. It will go to global execution context and create "var height = 50". But it is a really bad practice and will cause "garbage leakage".
 
 With the "use strict" mode, JS does not allow to use of undeclared variables.
 
+```
 'use scrict'
 function weird(){
   height = 50;
   return height;
 }
-
 ```
 
 this function will throw "ReferenceError: height is not defined".
