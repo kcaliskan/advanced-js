@@ -177,9 +177,11 @@ console.log(supersecret);
 
 ## Dynamic vs Lexical Scope
 
-1. "this" keyword is not lexically scoped that it does not matter where it is run. It matters how the function was called.
+1. Lexical means where it is written, scoping is what variable we have access. JavaScript engine before we run any code before we get to line twelve or line thirteen already knows which function has access to which variables because JavaScript is lexically scoped (statically scoped)
 
 2. Everything in JavaScript is actually lexically scoped, how you write it determines what we have available except for the "this" keyword.
+
+3. "this" keyword is not lexically scoped that it does not matter where it is run. It matters how the function was called.
 
 ![js-foundaion-ii-dynamic-vs-lexical-scope-summary-5](../img/js-foundaion-ii-dynamic-vs-lexical-scope-summary-5.png)
 
