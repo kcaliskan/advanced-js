@@ -17,5 +17,20 @@ function a(fn){
   fn()
 }
 
-a(function () { console.log('hi there)})
+a(function () { console.log('hi there')})
 ```
+
+4. We can return functions as a values from other functions.
+
+```
+function b(){
+return function c() {console.log('bye')}
+}
+
+var d = b();
+d();
+```
+
+## Higher Order Functions (HOF)
+
+1. Higher order functions are simply a function that can take a function as an argument or a function that returns another function.
