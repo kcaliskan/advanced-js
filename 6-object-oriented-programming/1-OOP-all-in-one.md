@@ -336,3 +336,68 @@ console.log(peter.build())
 const sam = new Elf('Sam', 'bow');
 console.log(sam.build())
 ```
+
+5. ES6 Class
+
+We have a constructor and then the constructor is something that gets run everytime when we instantiate or use the `new` keyword on a class.
+
+```
+function Elf(name, weapon){
+  constructor(){
+    this.name = name;
+    this.weapon = weapon;
+  }
+
+  attack() {
+    return 'attack with ' + this.weapon;
+  }
+}
+
+const peter = new Elf('Peter', 'stones');
+console.log(peter.attack())
+const sam = new Elf('Sam', 'bow');
+console.log(sam.attack())
+```
+
+**Why do we just add atack to the constructor?**\
+Everytime we use the `new` keyword and create or instantiate a class the constructor function gets run because each elf has a unique name and perhaps a unique weapon but attack is shared by all instances of the class. If we moved attack to the constructor, that's going to take up memory space. We just have one function in one location that all these instances can access.
+
+6. Inheritance
+
+```
+class Character {
+  constructor(name, weapon) {
+    this.name = name;
+    this.weapon = weapon;
+  }
+  attack() {
+    return 'atack with ' + this.weapon
+  }
+}
+
+class Elf extends Character {
+  constructor(name, weapon, type) {
+    // console.log('what am i?', this); this gives an error
+    super(name, weapon)
+    console.log('what am i?', this);
+    this.type = type;
+  }
+}
+
+class Ogre extends Character {
+  constructor(name, weapon, color) {
+    super(name, weapon);
+    this.color = color;
+  }
+  makeFort() { // this is like extending our prototype.
+    return 'strongest fort in the world made'
+  }
+}
+
+const houseElf = new Elf('Dolby', 'cloth', 'house')
+//houseElf.makeFort() // error
+const shrek = new Ogre('Shrek', 'club', 'green')
+shrek.makeFort()
+```
+
+`class Elf extends Character {` Elf is sub-class and Character is super class.
