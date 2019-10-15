@@ -124,3 +124,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 94. [SelfTaughtDev](https://www.youtube.com/channel/UC_CWq39fcBPCmgKYZ0yProg/videos)
 95. [dcode](https://www.youtube.com/channel/UCjX0FtIZBBVD3YoCcxnDC4g/videos)
 96. [Jesse Showalter](https://www.youtube.com/user/JesseAtomic/videos)
+97. [Web Dev Simplified](https://www.youtube.com/channel/UCFbNIlppjAuEX4znoulh0Cw/videos)
