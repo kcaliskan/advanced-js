@@ -1,5 +1,12 @@
 # Object-Oriented Programming in JavaScript
 
+Why OOP?
+
+- Clear + Understandable
+- Eas to Extend
+- Memory Efficient
+- DRY
+
 First step to OOP:
 
 ```
@@ -400,4 +407,49 @@ const shrek = new Ogre('Shrek', 'club', 'green')
 shrek.makeFort()
 ```
 
-`class Elf extends Character {` Elf is sub-class and Character is super class.
+- `class Elf extends Character` Elf is subclass and Character is superclass.
+
+- When we do `class Elf extends Character` it means 'hey, extend and set the `__proto__` to the Character. So Elf now has a prototype chain up to Character.
+
+- By invoking `super()` inside of the constructor, the `super()` says 'hey, call the superclass of the Elf' and calls the constructor of it (Character).
+
+- In order for us to use `this` keyword inside of the constructor, we have to call super first as `super()`.
+
+```
+class Elf extends Character {
+  constructor(name, weapon, type) {
+    super(name, weapon);
+    this.type = type;
+  }
+}
+```
+
+- When we do:
+
+```
+class Character {
+  constructor(name, weapon) {
+    this.name = name;
+    this.weapon = weapon;
+  }
+  attack() {
+    return 'atack with ' + this.weapon
+  }
+}
+
+class Ogre extends Character {
+  constructor(name, weapon, color) {
+    super(name, weapon);
+    this.color = color;
+  }
+  makeFort() { // this is like extending our prototype.
+    return 'strongest fort in the world made'
+  }
+}
+```
+
+`class Ogre extends Character`, JavaScript does `Ogre.prototype.makeFort =` under the hood.
+
+- When we use the new keyword from a class, we create an instance of a class. Instance is essentially creating a version of the class.
+
+Inheritance which is what we do with the keyword extends is inheriting something from a higher class. Inheritance in JavaScript doesn't actually copy our functionality. It doesn't just simply copy whatever we have in character. Instead it simply links up the prototype chain, so you're not creating copies and making things inefficient, instead whenever it doesn't find something let's say on the `Ogre` class, it's going to look up the `Ogre`'s superclass which is `Character`.
