@@ -158,9 +158,13 @@ Promise.all([promise, promise2, promise3, promise4])
 ```
 const urls = ['https://jsonplaceholder.typicode.com/posts', 'https://jsonplaceholder.typicode.com/comments', 'https://jsonplaceholder.typicode.com/albums', 'https://jsonplaceholder.typicode.com/photos']
 
-const urlResponse = Promise.all(urls.map((URL) => {
+const urlResponse = Promise.all(urls.map( URL => {
     return fetch(URL).then(resp => resp.json())
   }))
-    .then(res => console.log(res[0]))
+    .then(array => {
+      console.log('users', array[0])
+      console.log('posts', array[1])
+      console.log('albums', array[2])
+    }).catch('oops')
 
 ```
