@@ -292,7 +292,7 @@ partialmultiplyBy5(4,10);
 
 # Memoization
 
-Caching is just a way for us to speed up programs and hold some pece of data in an easily accessible box. Memoization is a specific form of caching.
+Caching is just a way for us to speed up programs and hold some piece of data in an easily accessible box. Memoization is a specific form of caching.
 
 Memoization example:
 
@@ -327,7 +327,7 @@ Composing or composition is the idea that any sort of data transformation what w
 
 data --> fn --> data --> fn -->
 
-We have data that getsprocessed by a function that outputs some sort of data and that data gets processed by another function that outputs that data in a new form and so on and so fort. Composebility is a system design principle that deals with this relationship of components. Highly composoble system provides components that can be selected and assebled in a various combinations just like an assembly line.
+We have data that gets processed by a function that outputs some sort of data and that data gets processed by another function that outputs that data in a new form and so on and so fort. Composability is a system design principle that deals with this relationship of components. Highly composable system provides components that can be selected and assebled in a various combinations just like an assembly line.
 
 // Compose
 
@@ -376,7 +376,7 @@ pipe(fn1, fn2, fn3)(50);
 
 With compose, the `fn3` is going to run first then `fn2` and then `fn1`.
 
-With peipe, the `fn1` is going to run first then `fn2` and then `fn3`.
+With pipe, the `fn1` is going to run first then `fn2` and then `fn3`.
 
 If we want our `pipe` function to goes with the same order as `compose`, we can do: `pipe(fn3, fn2, fn1)(50);`
 
@@ -389,3 +389,5 @@ It usually is a good practice and a good idea that a fewer number of parameters 
 Why is that?
 
 Because you can do more interesting things and make functions more flexible. The more parameters a function has the harder it is to really compose it iwth other function. It doesn't mean it's impossible but it does become a little bit more difficult.
+
+# Reviewing FP
