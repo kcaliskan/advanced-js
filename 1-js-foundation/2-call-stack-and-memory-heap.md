@@ -12,6 +12,6 @@ In software, a stack overflow occurs if the call stack pointer exceeds the stack
 
 ## Memory Heap
 
-1. We use the memory heap to actually point to different variables and obhects and data that we store so that we know where to look.
+1. Memory heap is where the memory allocation happens.
 
-2. Memory heap is where the memory allocation happens.
+2. We use the memory heap to actually point to different variables and objects and data that we store so that we know where to look.

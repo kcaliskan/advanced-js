@@ -1,6 +1,6 @@
-### Memory Leak
+## Memory Leak
 
-## Main Reasons for Memory Leak
+### Main Reasons for Memory Leak
 
 **Global Variables**
 
