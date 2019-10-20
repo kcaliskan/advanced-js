@@ -46,7 +46,7 @@ var c = 1;
 
 # JS Run Time - How JavaScript Works?
 
-![js-foundation-how-javascript-works-2](../img/js-foundation-how-javascript-works-2.png)
+![javascript-runtime-1](../img/javascript-runtime-1.png)
 
 1. Javascript is a single threaded language that can be non-blocking.
 
@@ -62,7 +62,7 @@ var c = 1;
 
 7. Browser comes with a JavaScript engine which provides JavaScript runtime environment.
 
-8. JavaScript runtime actually consist of 2 more components viz. event loop and callback queue. Callback queue is also called as message queue or task queue.
+8. JavaScript runtime actually consist of 3 more components viz. event loop, job queue(also called Microtask queue) and callback queue(task queue). Callback queue is also called as message queue or task queue.
 
 9. Browsers use low level language like C++ to perform these operations and provide clean JavaScript API to work with. These APIs are known as Web APIs.
 
@@ -73,3 +73,5 @@ var c = 1;
 12. So when you call a function, it gets pushed to the stack. If that function contains Web API call, JavaScript will delegate control of it to the Web API with a callback function and move to the next lines until function returns something. Once function hits return statement, that function is popped from the stack and move to the next stack entry.
 
 13. Meanwhile, Web API is doing it’s job in the background and remembers what callback function is associated with that job. Once job is done, Web API binds result of that job to callback function and publishes a message to message queue (AKA callback queue) with that callback. The only job of event loop is to look at callback queue and once there is something pending in callback queue, push that callback to the stack. Event loop pushes one callback function at a time, to the stack, once the stack is empty. Later, stack will execute callback function.
+
+14. Promises and async await was built in JavaScript natively. After the implementation of Promises, JavaScript run time got another Queue called "Job Queue". Job Queue, also called Microtask queue, is higher than the callback queue by prioritization. What that means that when a promise or async await return a statement, event loop first check job queue first and if it's completely empty then it's check Callback queue.
