@@ -38,6 +38,10 @@ movePlayer(100, 'Left')
 
 ## Promises
 
+**How we do listern for when the status of a promise changes?**
+
+When the status of a promise changes to fulfilled, which it will when we call resolve, the function that we pass to `.then` is going to get invoked. And when the status of the promise changes to rejected, which it will when we call reject, the function that we pass to `.catch` is going to be invoked.
+
 Basic Promise code:
 
 ```

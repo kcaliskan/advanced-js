@@ -1,18 +1,49 @@
-const urls = [
-  "https://jsonplaceholder.typicode.com/posts",
-  "https://jsonplaceholder.typicode.com/comments",
-  "https://jsonplaceholder.typicode.com/albums",
-  "https://jsonplaceholder.typicode.com/photos"
-];
+const loadImage = url => {
+  return new Promise(function(resolve, reject) {
+    //Open a new XHR
+    var request = new XMLHttpRequest();
+    request.open("GET", url, true);
 
-const getData = async function() {
-  const [users, posts, albums] = await Promise.all(
-    urls.map(url => fetch(url).then(resp => resp.json()))
-  );
+    // When the request loads, check whether it was successful
+    request.onload = function() {
+      if (request.status === 200) {
+        // If successful, resolve the promise
+        resolve(request.response);
+      } else {
+        // Otherwise, reject the promise
+        reject(
+          Error(
+            "An error occurred while loading image. error code:" +
+              request.statusText
+          )
+        );
+      }
+    };
 
-  console.log("users", users);
-  console.log("posts", posts);
-  console.log("albums", albums);
+    request.send();
+  });
 };
 
-getData();
+const embedImage = url => {
+  loadImage(url)
+    .then(
+      function(result) {
+        return result;
+        // console.log(result);
+        // let imgS = document.querySelector(".ipeksi");
+        // imgS.src = result;
+        // const img = new Image();
+        // var imageURL = this.URL.createObjectURL(result);
+        // img.src = imageURL;
+        // document.querySelector("body").appendChild(img);
+      },
+      function(err) {
+        console.log(err);
+      }
+    )
+    .then(res => {
+      console.log(res);
+    });
+};
+
+embedImage("https://source.unsplash.com/random");
