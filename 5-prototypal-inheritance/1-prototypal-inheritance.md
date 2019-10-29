@@ -6,38 +6,36 @@
 
 2. We can see that prototypal inheritance:
 
-```
+```javascript
 const array = []; // We created a new array, this new array was created from a constructor "Array []"
 
-array.__proto__ // we go up the prototype chain and can see the constructor Array
+array.__proto__; // we go up the prototype chain and can see the constructor Array
 
-array.__proto__.__proto__ // We get the "base object" in JavaScript. This is the object that everything in javaScript gets created including functions and arrays.
-
-
+array.__proto__.__proto__; // We get the "base object" in JavaScript. This is the object that everything in javaScript gets created including functions and arrays.
 ```
 
 2. Object gets access to the properties and methods of another object through the prototype chain.
 
 Example 1 - Creating Prototype Chain:
 
-```
+```javascript
 let dragon = {
-  name: 'Tanya',
+  name: "Tanya",
   fire: true,
-  fight(){
-    return 5
+  fight() {
+    return 5;
   },
-  sing(){
-    return `I am ${this.name}, the breather of fire`
+  sing() {
+    return `I am ${this.name}, the breather of fire`;
   }
-}
+};
 
 let lizard = {
-name: 'Kiki',
-fight(){
-  return 1
-}
-}
+  name: "Kiki",
+  fight() {
+    return 1;
+  }
+};
 
 lizard.__proto__ = dragon; // We create prototype chain and inherit dragon's all properties and methods.
 lizard.sing(); // JS engine first will look up the lizard's properties to find "sing", if it can't find and then it will automatically go look up the dragon's properties.
@@ -45,15 +43,15 @@ lizard.sing(); // JS engine first will look up the lizard's properties to find "
 
 How to check if anything protype of anything ?
 
-```
-dragon.isPrototypeof(lizard) // Is dragon prototype of lizard?
+```javascript
+dragon.isPrototypeof(lizard); // Is dragon prototype of lizard?
 ```
 
 3. How to check the properties of an object?:
 
 P.S. soruce code is Example 1!
 
-```
+```javascript
 for (let prop in lizard){
   console.log(prop);
 }
@@ -66,7 +64,6 @@ for (let prop in lizard){
     console.log(prop);
   }
 }
-
 ```
 
 4. Why we should not use `___proto___` ?
@@ -75,13 +72,13 @@ It is bad for performance and there's different ways that we want to inherit whe
 
 We can use `Object.create()` for inheriting.
 
-```
+```javascript
 let human = {
   mortal: true
-}
+};
 
-let socrates = Object.create(human)
-console.log(human.isPrototypeOf(socrates)) // true
+let socrates = Object.create(human);
+console.log(human.isPrototypeOf(socrates)); // true
 ```
 
 We created prototype chain by using `let socrates = Object.create(human)`;
@@ -98,8 +95,7 @@ We're being efficient with our code. We're not repeating ourselves and we're sav
 
 Functions are callable object.
 
-```
-
+```javascript
 let array = [];
 
 "array.__proto__" => points the Array constructor object.
@@ -136,7 +132,7 @@ Besides creation of objects by specified pattern, a constructor function does an
 
 E.g., we may rewrite previous example with b and c objects using a constructor function. Thus, the role of the object a (a prototype) Foo.prototype plays:
 
-```
+```javascript
 // a constructor function
 function Foo(y) {
   // which may create objects
@@ -155,7 +151,7 @@ function Foo(y) {
 Foo.prototype.x = 10;
 
 // and inherited method "calculate"
-Foo.prototype.calculate = function (z) {
+Foo.prototype.calculate = function(z) {
   return this.x + this.y + z;
 };
 
@@ -172,7 +168,6 @@ c.calculate(40); // 80
 // properties we expect
 
 console.log(
-
   b.__proto__ === Foo.prototype, // true
   c.__proto__ === Foo.prototype, // true
 
@@ -188,7 +183,6 @@ console.log(
 
   b.calculate === b.__proto__.calculate, // true
   b.__proto__.calculate === Foo.prototype.calculate // true
-
 );
 ```
 
@@ -200,7 +194,7 @@ This figure again shows that every object has a prototype. Constructor function 
 
 Consider:
 
-```
+```javascript
 function MyCustomType (prop1,prop2){
  this.prop = prop1;
  this.anotherProp = prop2;
@@ -225,7 +219,7 @@ This is where Function.prototype property comes into play
 
 Consider:
 
-```
+```javascript
 function MyCustomType (prop1,prop2){
  this.prop = prop1;
  this.anotherProp = prop2;
@@ -251,10 +245,10 @@ Referring back to our example above, myInstance `__proto__` would get linked to 
 
 Let say that you create an empty array literal and do this :
 
-```
-let myArray=[];
+```javascript
+let myArray = [];
 myArray.push(3);
-console.log(myArray)
+console.log(myArray);
 ```
 
 Even though the array is empty, you are still able to call the method "push" . That is possible because
