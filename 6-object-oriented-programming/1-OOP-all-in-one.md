@@ -3,7 +3,7 @@
 Why OOP?
 
 - Clear + Understandable
-- Eas to Extend
+- Easy to Extend
 - Memory Efficient
 - DRY
 
@@ -69,7 +69,7 @@ The problem with factory funtions is space and memory. If we need 1000s elfs, th
 
 Name and weapon values are different for each elf but methods are not. We copy the same method for the each elf and it takes space in the memory.
 
-How We can solve that problem? Prototypal Inheritance.
+How we can solve that problem? Prototypal Inheritance.
 
 3. Object.create()
 
@@ -125,7 +125,7 @@ function createElf(name, weapon) {
 
 We see that `let newElf = Object.create(elfFunctions);` created prototyped chain. What we're doing with Object.create() is true prototypal inheritance.
 
-But, what we're doing here in't necessarily object oriented programming yet.
+But, what we're doing here isn't necessarily object oriented programming yet.
 
 4. Constructor Functions
 
@@ -147,22 +147,22 @@ sam.name; // 'Sam'
 
 The `new` keyword automatically returns the object for us(from elf function). It creates the `Elf` constructor.
 
-Any function that is invoked using the new keyword is called a constructor function.
+Any function that is invoked using the `new` keyword is called a constructor function.
 
 We won't get a syntax error if we don't use like this but as a general rule, all constructor functions should start with a capital letter.
 
-Function constructor or constructor functions are simply that they allow use to use the new keyword and create these objects for us.
+Function constructor or constructor functions are simply that they allow us to use the `new` keyword and create these objects for us.
 
-What does `new` behind the scene?
-When we use the new keyword instead of `this` pointing to the windows object like it usually does, the `new` keyword changes what `this` pointing to when a new execution context is created. In our examples, `this` becomes Peter or Sam.
+What does `new` behind the scene?\
+When we use the `new` keyword instead of `this` pointing to the `window` object like it usually does, the `new` keyword changes what `this` pointing to when a new execution context is created. In our examples, `this` becomes Peter or Sam.
 
-Simply means that if we don't initiate new elf with the `new` keyword, `this` which is inside of the `function elf` will point to the `window` object not the new object we created.
+Simply means that if we don't initiate new elf with the `new` keyword, `this` which is inside of the `function Elf` will point to the `window` object not the new object we created.
 
-Without the new keyword, we are not creating this object and we are not returning an object. And we're also not assigning `this` to the object that calls us.
+Without the `new` keyword, we are not creating `this` object and we are not returning an object. And we're also not assigning `this` to the object that calls us.
+
+**Power of the `prototype` object which comes with Functions**
 
 Every function in JavaScript gets automatically a prototype property.
-
-**Power of the `prototype` object which comes with Functions`**
 
 ```javascript
 //Constructor Function
@@ -242,11 +242,6 @@ Elf.prototype.build = function() {
   function building() {
     return this.name + " I built this";
   }
-  return building();
-
-  const building = () => {
-    return this.name + " I built this";
-  };
 
   return building();
 };
@@ -257,9 +252,9 @@ const sam = new Elf("Sam", "bow");
 console.log(sam.build());
 ```
 
-The code above will returen "undefined" because of the `this` keyword inside of the `build` function.
+The code above will return `undefined` because of the `this` keyword inside of the `build` function.
 
-`This` keyword is lexically scoped and the it lose its object while invoked and attach itself to the `global object`.
+`This` keyword is lexically scoped and it lose its object while invoked and attach itself to the `global object`.
 
 We can solve this problem with three different ways:
 
@@ -344,7 +339,7 @@ console.log(sam.build());
 
 5. ES6 Class
 
-We have a constructor and then the constructor is something that gets run everytime when we instantiate or use the `new` keyword on a class.
+We have a `constructor` and then the `constructor` is something that gets run everytime when we instantiate or use the `new` keyword on a class.
 
 ```javascript
 function Elf(name, weapon){
@@ -364,7 +359,7 @@ const sam = new Elf('Sam', 'bow');
 console.log(sam.attack())
 ```
 
-**Why do we just add atack to the constructor?**\
+**Why don't we just add attack to the constructor?**\
 Everytime we use the `new` keyword and create or instantiate a class the constructor function gets run because each elf has a unique name and perhaps a unique weapon but attack is shared by all instances of the class. If we moved attack to the constructor, that's going to take up memory space. We just have one function in one location that all these instances can access.
 
 6. Inheritance
@@ -450,6 +445,6 @@ class Ogre extends Character {
 
 `class Ogre extends Character`, JavaScript does `Ogre.prototype.makeFort =` under the hood.
 
-- When we use the new keyword from a class, we create an instance of a class. Instance is essentially creating a version of the class.
+- When we use the `new` keyword from a class, we create an instance of a class. Instance is essentially creating a version of the class.
 
 Inheritance which is what we do with the keyword extends is inheriting something from a higher class. Inheritance in JavaScript doesn't actually copy our functionality. It doesn't just simply copy whatever we have in character. Instead it simply links up the prototype chain, so you're not creating copies and making things inefficient, instead whenever it doesn't find something let's say on the `Ogre` class, it's going to look up the `Ogre`'s superclass which is `Character`.

@@ -54,15 +54,16 @@ dragon.isPrototypeof(lizard); // Is dragon prototype of lizard?
 P.S. source code is Example 1!
 
 ```javascript
-for (let prop in lizard){
+for (let prop in lizard) {
   console.log(prop);
 }
 
-This will return the lizard's properties. But lizard only has two property in reality. How we can check it?
+//This will return the lizard's properties. But lizard only has two property in reality.
+//How we can check it?
 
-
-for (let prop in lizard){
-  if (lizard.hasOwnProperty(prop)){ //Only log whatever Lizard has as its own property.
+for (let prop in lizard) {
+  if (lizard.hasOwnProperty(prop)) {
+    //Only log whatever Lizard has as its own property.
     console.log(prop);
   }
 }
