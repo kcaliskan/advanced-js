@@ -9,25 +9,25 @@ Why OOP?
 
 First step to OOP:
 
-```
+```javascript
 const elf = {
-  name: 'Orwell',
-  weapon: 'bow',
-  attack(){
-    return 'attack with' + this.weapon;
+  name: "Orwell",
+  weapon: "bow",
+  attack() {
+    return "attack with" + this.weapon;
   }
-}
+};
 
 const elf2 = {
-  name: 'Sally',
-  weapon: 'bow',
-  attack(){
-    return 'attack with' + this.weapon;
+  name: "Sally",
+  weapon: "bow",
+  attack() {
+    return "attack with" + this.weapon;
   }
-}
+};
 
-elf.attack()
-elf2.attack()
+elf.attack();
+elf2.attack();
 ```
 
 1. We do encapsulation here. It is the first step to the OOP. We've grouped funcionality together.
@@ -42,26 +42,26 @@ What is the solution? Let's move on to the next step.
 
 Factory functions as the name suggests are functions that act like factories. They create objects for us.
 
-```
+```javascript
 //factory functions
-function createElf(name, weapon){
-  return{
+function createElf(name, weapon) {
+  return {
     name: name,
     weapon: weapon,
-    attack(){
-      return 'attack with ' + weapon
+    attack() {
+      return "attack with " + weapon;
     }
-  }
+  };
 }
 
-const peter = createElf('Peter', 'stones');
+const peter = createElf("Peter", "stones");
 peter.attack();
 ```
 
 The beauty with factory functions is that If I want to create another elf all I do is create another one with just one line:
 
-```
-const sam = createElf('Sam', 'bow');
+```javascript
+const sam = createElf("Sam", "bow");
 sam.attack();
 ```
 
@@ -73,26 +73,25 @@ How We can solve that problem? Prototypal Inheritance.
 
 3. Object.create()
 
-```
+```javascript
 //Object.create()
 const elfFunctions = {
-  attack(){
-    return 'attack with ' + this.weapon;
+  attack() {
+    return "attack with " + this.weapon;
   }
-}
+};
 
-function createElf(name, weapon){
+function createElf(name, weapon) {
   let newElf = Object.create(elfFunctions);
   newElf.name = name;
   newElf.weapon = weapon;
   return newElf;
 }
 
-const peter = createElf('Peter', 'stones');
+const peter = createElf("Peter", "stones");
 console.log(peter.attack());
 
-
-const sam = createElf('Sam', 'bow');
+const sam = createElf("Sam", "bow");
 console.log(sam.attack());
 ```
 
@@ -100,8 +99,8 @@ What Object.create() does? Object.create() creates a link between the `const elf
 
 If we `console.log(newElf);` we can see that `Object.create(elfFunction)` creates an empty object.
 
-```
-function createElf(name, weapon){
+```javascript
+function createElf(name, weapon) {
   let newElf = Object.create(elfFunctions);
   console.log(newElf); // {}
   newElf.name = name;
@@ -114,10 +113,10 @@ But where is the `attack()` function?
 
 When we log `console.log(newElf.__proto__)` in this code below:
 
-```
-function createElf(name, weapon){
+```javascript
+function createElf(name, weapon) {
   let newElf = Object.create(elfFunctions);
-    console.log(newElf.__proto__); // { attack: [Function: attack] }
+  console.log(newElf.__proto__); // { attack: [Function: attack] }
   newElf.name = name;
   newElf.weapon = weapon;
   return newElf;
@@ -132,17 +131,17 @@ But, what we're doing here in't necessarily object oriented programming yet.
 
 In order to use a constructor function, we need to use the `new` keyword in JavaScript.
 
-```
-   function Elf(name, weapon){
-     this.name = name;
-     this.weapon = weapon;
-   }
+```javascript
+function Elf(name, weapon) {
+  this.name = name;
+  this.weapon = weapon;
+}
 ```
 
-```
-const peter = new Elf('Peter', 'stones');
+```javascript
+const peter = new Elf("Peter", "stones");
 
-const sam = new Elf('Sam', 'fire')
+const sam = new Elf("Sam", "fire");
 sam.name; // 'Sam'
 ```
 
@@ -165,97 +164,97 @@ Every function in JavaScript gets automatically a prototype property.
 
 **Power of the `prototype` object which comes with Functions`**
 
-```
+```javascript
 //Constructor Function
-   function Elf(name, weapon){
-     this.name = name;
-     this.weapon = weapon;
-   }
-
-Elf.prototype.attack = function (){
-  return 'attack with ' + this.weapon;
+function Elf(name, weapon) {
+  this.name = name;
+  this.weapon = weapon;
 }
 
-const peter = new Elf('Peter', 'stones');
-console.log(peter.attack()) // attack with stones
-const sam = new Elf('Sam', 'bow');
-console.log(sam.attack()) // attack with bow
+Elf.prototype.attack = function() {
+  return "attack with " + this.weapon;
+};
+
+const peter = new Elf("Peter", "stones");
+console.log(peter.attack()); // attack with stones
+const sam = new Elf("Sam", "bow");
+console.log(sam.attack()); // attack with bow
 ```
 
 `Peter` and `Sam` are able to use `attack()` from the same location in memory instead of us copying attack multiple places in multiple locations in memory. We just have it written once on memory and both of these Elf(s) are going to point to `attack()` which is in the same memory space. And the beauty is that I can just keep adding functionality here.
 
 **Arrow functions**
 
-```
+```javascript
 //Constructor Function
-   function Elf(name, weapon){
-     this.name = name;
-     this.weapon = weapon;
-   }
-
-Elf.prototype.attack = () => {
-  return 'attack with ' + this.weapon;
+function Elf(name, weapon) {
+  this.name = name;
+  this.weapon = weapon;
 }
 
-const peter = new Elf('Peter', 'stones');
-console.log(peter.attack()) // attack with undefined
-const sam = new Elf('Sam', 'bow');
-console.log(sam.attack()) // attack with undefined
+Elf.prototype.attack = () => {
+  return "attack with " + this.weapon;
+};
+
+const peter = new Elf("Peter", "stones");
+console.log(peter.attack()); // attack with undefined
+const sam = new Elf("Sam", "bow");
+console.log(sam.attack()); // attack with undefined
 ```
 
 We get `undefined`. Because arrow functions are lexically scoped. They defined `this` based on where they're written. And `this` in this case is the global object.
 
 **More Constructor Functions**
 
-```
-   function Elf(name, weapon){
-     this.name = name;
-     this.weapon = weapon;
-     var a = 5;
-     console.log('this', this)
-   }
-
-   Elf.prototype.attack = () => {
-  return 'attack with ' + this.weapon;
+```javascript
+function Elf(name, weapon) {
+  this.name = name;
+  this.weapon = weapon;
+  var a = 5;
+  console.log("this", this);
 }
 
-const peter = new Elf('Peter', 'stones');
-console.log(peter.attack())
-const sam = new Elf('Sam', 'bow');
-console.log(sam.attack())
+Elf.prototype.attack = () => {
+  return "attack with " + this.weapon;
+};
+
+const peter = new Elf("Peter", "stones");
+console.log(peter.attack());
+const sam = new Elf("Sam", "bow");
+console.log(sam.attack());
 ```
 
 If we do something like `var a=5;`, the constructor function is not going to add this to our Elf object. The only way we can add properties to this object is to use `this` keyword.
 
 **`This` Keyword**
 
-```
-function Elf(name, weapon){
+```javascript
+function Elf(name, weapon) {
   this.name = name;
   this.weapon = weapon;
 }
 
 Elf.prototype.attack = function() {
-  return 'attack with ' + this.weapon;
-}
+  return "attack with " + this.weapon;
+};
 
 Elf.prototype.build = function() {
   function building() {
-    return this.name + ' I built this'
-}
-return building()
+    return this.name + " I built this";
+  }
+  return building();
 
-const building = () => {
-  return this.name + ' I built this'
-}
+  const building = () => {
+    return this.name + " I built this";
+  };
 
-return building()
-}
+  return building();
+};
 
-const peter = new Elf('Peter', 'stones');
-console.log(peter.build())
-const sam = new Elf('Sam', 'bow');
-console.log(sam.build())
+const peter = new Elf("Peter", "stones");
+console.log(peter.build());
+const sam = new Elf("Sam", "bow");
+console.log(sam.build());
 ```
 
 The code above will returen "undefined" because of the `this` keyword inside of the `build` function.
@@ -266,89 +265,88 @@ We can solve this problem with three different ways:
 
 First Solution with arrow functions:
 
-```
-function Elf(name, weapon){
+```javascript
+function Elf(name, weapon) {
   this.name = name;
   this.weapon = weapon;
 }
 
 Elf.prototype.attack = function() {
-  return 'attack with ' + this.weapon;
-}
+  return "attack with " + this.weapon;
+};
 
 Elf.prototype.build = function() {
-
   const building = () => {
-  return this.name + ' I built this'
-  }
+    return this.name + " I built this";
+  };
 
-  return building()
-}
+  return building();
+};
 
-const peter = new Elf('Peter', 'stones');
-console.log(peter.build())
-const sam = new Elf('Sam', 'bow');
-console.log(sam.build())
+const peter = new Elf("Peter", "stones");
+console.log(peter.build());
+const sam = new Elf("Sam", "bow");
+console.log(sam.build());
 ```
 
 Second Solution with `bind()`:
 
-```
-function Elf(name, weapon){
+```javascript
+function Elf(name, weapon) {
   this.name = name;
   this.weapon = weapon;
 }
 
 Elf.prototype.attack = function() {
-  return 'attack with ' + this.weapon;
-}
+  return "attack with " + this.weapon;
+};
 
 Elf.prototype.build = function() {
-  function building(){
-    return this.name + ' I built this'
+  function building() {
+    return this.name + " I built this";
   }
 
-  return building.bind(this)
-}
+  return building.bind(this);
+};
 
-const peter = new Elf('Peter', 'stones');
-console.log(peter.build()())
-const sam = new Elf('Sam', 'bow');
-console.log(sam.build()())
+const peter = new Elf("Peter", "stones");
+console.log(peter.build()());
+const sam = new Elf("Sam", "bow");
+console.log(sam.build()());
 ```
 
 Third solution with `self` keyword:
 
-```
-function Elf(name, weapon){
+```javascript
+function Elf(name, weapon) {
   this.name = name;
   this.weapon = weapon;
 }
 
 Elf.prototype.attack = function() {
-  return 'attack with ' + this.weapon;
-}
+  return "attack with " + this.weapon;
+};
 
 Elf.prototype.build = function() {
   const self = this;
-  function building(){
-    return self.name + ' I built this'
+  function building() {
+    return self.name + " I built this";
   }
 
-  return building()
-}
+  return building();
+};
 
-const peter = new Elf('Peter', 'stones');
-console.log(peter.build())
-const sam = new Elf('Sam', 'bow');
-console.log(sam.build())
+const peter = new Elf("Peter", "stones");
+console.log(peter.build());
+const sam = new Elf("Sam", "bow");
+console.log(sam.build());
 ```
 
 5. ES6 Class
 
 We have a constructor and then the constructor is something that gets run everytime when we instantiate or use the `new` keyword on a class.
 
-```
+```javascript
 function Elf(name, weapon){
   constructor(){
     this.name = name;
@@ -371,22 +369,22 @@ Everytime we use the `new` keyword and create or instantiate a class the constru
 
 6. Inheritance
 
-```
+```javascript
 class Character {
   constructor(name, weapon) {
     this.name = name;
     this.weapon = weapon;
   }
   attack() {
-    return 'atack with ' + this.weapon
+    return "atack with " + this.weapon;
   }
 }
 
 class Elf extends Character {
   constructor(name, weapon, type) {
     // console.log('what am i?', this); this gives an error
-    super(name, weapon)
-    console.log('what am i?', this);
+    super(name, weapon);
+    console.log("what am i?", this);
     this.type = type;
   }
 }
@@ -396,15 +394,16 @@ class Ogre extends Character {
     super(name, weapon);
     this.color = color;
   }
-  makeFort() { // this is like extending our prototype.
-    return 'strongest fort in the world made'
+  makeFort() {
+    // this is like extending our prototype.
+    return "strongest fort in the world made";
   }
 }
 
-const houseElf = new Elf('Dolby', 'cloth', 'house')
+const houseElf = new Elf("Dolby", "cloth", "house");
 //houseElf.makeFort() // error
-const shrek = new Ogre('Shrek', 'club', 'green')
-shrek.makeFort()
+const shrek = new Ogre("Shrek", "club", "green");
+shrek.makeFort();
 ```
 
 - `class Elf extends Character` Elf is subclass and Character is superclass.
@@ -415,7 +414,7 @@ shrek.makeFort()
 
 - In order for us to use `this` keyword inside of the constructor, we have to call super first as `super()`.
 
-```
+```javascript
 class Elf extends Character {
   constructor(name, weapon, type) {
     super(name, weapon);
@@ -426,14 +425,14 @@ class Elf extends Character {
 
 - When we do:
 
-```
+```javascript
 class Character {
   constructor(name, weapon) {
     this.name = name;
     this.weapon = weapon;
   }
   attack() {
-    return 'atack with ' + this.weapon
+    return "atack with " + this.weapon;
   }
 }
 
@@ -442,8 +441,9 @@ class Ogre extends Character {
     super(name, weapon);
     this.color = color;
   }
-  makeFort() { // this is like extending our prototype.
-    return 'strongest fort in the world made'
+  makeFort() {
+    // this is like extending our prototype.
+    return "strongest fort in the world made";
   }
 }
 ```

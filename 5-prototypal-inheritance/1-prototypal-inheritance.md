@@ -2,7 +2,7 @@
 
 ![prototypal-inheritance-1](../img/prototypal-inheritance-1.png)
 
-1. Inheritance is an oject getting access to the properties and methods of another object.
+1. Inheritance is an object getting access to the properties and methods of another object.
 
 2. We can see that prototypal inheritance:
 
@@ -11,8 +11,8 @@ const array = []; // We created a new array, this new array was created from a c
 
 array.__proto__; // we go up the prototype chain and can see the constructor Array
 
-// We get the "base object" in JavaScript. This is the object that everything in javaScript gets created including functions and arrays.
-array.__proto__.__proto__;
+array.__proto__.__proto__; // We get the "base object" in JavaScript.
+//This is the object that everything in javaScript gets created including functions and arrays.
 ```
 
 2. Object gets access to the properties and methods of another object through the prototype chain.
@@ -39,7 +39,8 @@ let lizard = {
 };
 
 lizard.__proto__ = dragon; // We create prototype chain and inherit dragon's all properties and methods.
-lizard.sing(); // JS engine first will look up the lizard's properties to find "sing", if it can't find and then it will automatically go look up the dragon's properties.
+lizard.sing(); // JS engine first will look up the lizard's properties to find "sing"
+//if it can't find and then it will automatically go look up the dragon's properties.
 ```
 
 How to check if anything protype of anything ?
@@ -50,7 +51,7 @@ dragon.isPrototypeof(lizard); // Is dragon prototype of lizard?
 
 3. How to check the properties of an object?:
 
-P.S. soruce code is Example 1!
+P.S. source code is Example 1!
 
 ```javascript
 for (let prop in lizard){
