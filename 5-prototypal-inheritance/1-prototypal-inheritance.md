@@ -11,7 +11,8 @@ const array = []; // We created a new array, this new array was created from a c
 
 array.__proto__; // we go up the prototype chain and can see the constructor Array
 
-array.__proto__.__proto__; // We get the "base object" in JavaScript. This is the object that everything in javaScript gets created including functions and arrays.
+// We get the "base object" in JavaScript. This is the object that everything in javaScript gets created including functions and arrays.
+array.__proto__.__proto__;
 ```
 
 2. Object gets access to the properties and methods of another object through the prototype chain.
