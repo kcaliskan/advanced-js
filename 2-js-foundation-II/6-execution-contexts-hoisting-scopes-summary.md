@@ -29,22 +29,22 @@ Hoisting is the behavior of moving the variables or function declarations to the
 
 4. Overwrite:
 
-```
+```javascript
 var one = 1;
 var one = 2;
 ```
 
 The very last line was to assign. Second (last one) overwrites to first one.
 
-```
-a()
+```javascript
+a();
 
-function a(){
-console.log('hi);
+function a() {
+  console.log("hi");
 }
 
-funcion a(){
-console.log('bye);
+function a() {
+  console.log("bye");
 }
 ```
 
@@ -74,27 +74,27 @@ console.log('bye);
 **Function Expression**\
 This function is defined at runtime. When we actually run the function or call the function or execute the function or innoke the function.
 
-```
+```javascript
 var canada = () => {
-  console.log('cold');
-  }
+  console.log("cold");
+};
 ```
 
 or
 
-```
-var canada = function(){
-  console.log('cold);
-  }
+```javascript
+var canada = function() {
+  console.log("cold");
+};
 ```
 
 **Function Decleration**\
 This function gets defined at parse time. That is when the compiler initially looks at the code and starts hoisting and allocating memory.
 
-```
-function india(){
-  console.log('warm');
-  }
+```javascript
+function india() {
+  console.log("warm");
+}
 ```
 
 **Function Invocation / Call / Execution**\
@@ -115,38 +115,38 @@ india();
 
 5. Every function creates its own lexical scope:
 
-```
-var favouriteFood = 'grapes';
+```javascript
+var favouriteFood = "grapes";
 
-var foodThoughts = function () {
-console.log('original favourite food:' + favouriteFood);
+var foodThoughts = function() {
+  console.log("original favourite food:" + favouriteFood);
 
-var favouriteFood = 'sushi';
+  var favouriteFood = "sushi";
 
-console.log('New favourite food:' + favouriteFood);
-}
+  console.log("New favourite food:" + favouriteFood);
+};
 
-foodThoughts()
+foodThoughts();
 ```
 
 This function will output "undefined" and "sushi". It outputs "undefined" at the first line because there is already "favouriteFood" defined as "sushi" and it does not go out to look for the value of "favouriteFood" at Global Context. If we would had not been use the "var" while assigning sushi (just assign it like favouriteFood = 'sushi'), it would have gone to look for it at Global Context (and it would print out "grape").
 
 The code block become this before running:
 
-```
+```javascript
 var favouriteFood = undefined;
 var foodThoughts = undefined;
 
-foodThoughts = function () {
-var favouriteFood = undefined;
-console.log('original favourite food:' + favouriteFood);
+foodThoughts = function() {
+  var favouriteFood = undefined;
+  console.log("original favourite food:" + favouriteFood);
 
-favouriteFood = 'sushi';
+  favouriteFood = "sushi";
 
-console.log('New favourite food:' + favouriteFood);
-}
+  console.log("New favourite food:" + favouriteFood);
+};
 
-foodThoughts()
+foodThoughts();
 ```
 
 6. Scope chain: JavaScript compiler knows what environments are linked to each other and it knows what data can be accessed by which function, Scope chain starts where the variable is defined and goes all the way down to the global context to see if variable exists.
@@ -155,9 +155,9 @@ foodThoughts()
 
 Javascript is naturally a Function Scope language. It did not have Block Scope until ES6 (let and const).
 
-```
-if( 5 > 4){
-  var secret = '12345'
+```javascript
+if (5 > 4) {
+  var secret = "12345";
 }
 
 console.log(secret);
@@ -165,10 +165,10 @@ console.log(secret);
 
 We can access 'secret' because the JS does not do Block Scope. But with the ES6 (let and const), we can do Block Scope too. The code blow will throw referenceerror.
 
-```
-if( 5 > 4){
-  let secret = '12345'
-  const supersecret = 'manhattanisawesome'
+```javascript
+if (5 > 4) {
+  let secret = "12345";
+  const supersecret = "manhattanisawesome";
 }
 
 console.log(secret);
@@ -193,8 +193,8 @@ console.log(supersecret);
 
 2. With strict mode, you can not, for example, use undeclared variables.
 
-```
-function weird(){
+```javascript
+function weird() {
   height = 50;
   return height;
 }
@@ -204,9 +204,9 @@ This function will return "50". Because early version of the JS was allow us to 
 
 With the "use strict" mode, JS does not allow to use of undeclared variables.
 
-```
-'use scrict'
-function weird(){
+```javascript
+"use scrict";
+function weird() {
   height = 50;
   return height;
 }
@@ -216,15 +216,15 @@ this function will throw "ReferenceError: height is not defined".
 
 Another JS is Weird example:
 
-```
+```javascript
 var heyhey = function doodle() {
   //do something
-  doodle()
-  return 'heyhey
-}
+  doodle();
+  return "heyhey";
+};
 
-heyhey()
-doodle()
+heyhey();
+doodle();
 ```
 
 When we try to invoke the doodle function by using "doodle()", we get reference error(doodle is not define).
