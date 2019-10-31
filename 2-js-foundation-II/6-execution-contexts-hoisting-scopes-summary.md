@@ -208,9 +208,9 @@ function weird() {
 }
 ```
 
-This function will return "50". Because early version of the JS was allow us to use undeclared variables. It will go to global execution context and create "var height = 50". But it is a really bad practice and will cause "garbage leakage".
+This function will return "50". Because early version of the JS was allow us to use undeclared variables. It will go to global execution context and create `var height = 50`. But it is a really bad practice and will cause "garbage leakage".
 
-With the "use strict" mode, JS does not allow to use of undeclared variables.
+With the `use strict` mode, JS does not allow to use of undeclared variables.
 
 ```javascript
 "use scrict";
