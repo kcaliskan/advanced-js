@@ -2,16 +2,16 @@
 
 1. Closures allow a function to access variables from an enclosing scope or environment event after it leaves the scope in which it was declared.
 
-```
-function a(){
- let grandpa = 'grandpa';
-  return function b(){
-    let father = 'father';
-    return function c(){
-      let son = 'son'
-      return `${grandpa} > ${father} > ${son}`
-    }
-  }
+```javascript
+function a() {
+  let grandpa = "grandpa";
+  return function b() {
+    let father = "father";
+    return function c() {
+      let son = "son";
+      return `${grandpa} > ${father} > ${son}`;
+    };
+  };
 }
 
 a()()(); // 'grandpa > father > son'
@@ -19,17 +19,17 @@ a()()(); // 'grandpa > father > son'
 
 Because function c is inside of function a and function b,the JavaScript engine is going to say "allright I'll create a closure for you. All of the variables outside of the function c. I'm going to keep around them if function C is using it."
 
-```
-function a(){
- let grandpa = 'grandpa';
-  return function b(){
-    let father = 'father';
+```javascript
+function a() {
+  let grandpa = "grandpa";
+  return function b() {
+    let father = "father";
     let random = 12312347732;
-    return function c(){
-      let son = 'son'
-      return `${grandpa} > ${father} > ${son}`
-    }
-  }
+    return function c() {
+      let son = "son";
+      return `${grandpa} > ${father} > ${son}`;
+    };
+  };
 }
 
 a()()(); // 'grandpa > father > son'
@@ -41,12 +41,12 @@ The JavaScript engine isn't going to keep "random" variable when function B is i
 
 Exercise:
 
-```
-function callMeMaybe(){
-  setTimeout(function(){
-  console.log(callMe);
-}, 4000);
-  const callMe = 'Hi! I am now here!';
+```javascript
+function callMeMaybe() {
+  setTimeout(function() {
+    console.log(callMe);
+  }, 4000);
+  const callMe = "Hi! I am now here!";
 }
 
 callMeMaybe();
@@ -58,30 +58,29 @@ We sent "setTimeout" function to the web API to start a timer for four seconds a
 
 Closures can be very memory efficient.
 
-```
-const heavyDuty = (index) => {
-    const bigArray = new Array(7000).fill('emoji');
-    console.log('created');
-    return bigArray[index];
-}
+```javascript
+const heavyDuty = index => {
+  const bigArray = new Array(7000).fill("emoji");
+  console.log("created");
+  return bigArray[index];
+};
 
-heavyDuty(300)
-heavyDuty(200)
-heavyDuty(700)
+heavyDuty(300);
+heavyDuty(200);
+heavyDuty(700);
 
 const heavyDutyClosure = () => {
-   const bigArray = new Array(7000).fill('emoji');
-    console.log('created again');
-  return function(index){
+  const bigArray = new Array(7000).fill("emoji");
+  console.log("created again");
+  return function(index) {
     return bigArray[index];
-  }
-}
+  };
+};
 
 const getHeavyDuty = heavyDutyClosure();
-getHeavyDuty(688)
-getHeavyDuty(700)
-getHeavyDuty(800)
-
+getHeavyDuty(688);
+getHeavyDuty(700);
+getHeavyDuty(800);
 ```
 
 The first heavy duty was created three times vs heavyDutyClosure created only once. In heavyDutyClosure, we were able to create the big array once and because we knew we were going to access it a lot. We just maintain that closure scope over it and we were able to call it over and over without doing all that creation destruction work.
@@ -92,54 +91,54 @@ Encapsulation hides information that is unnecessary to be seen by the outside wo
 
 Exercise:
 
-```
+```javascript
 const makeNuclearButton = () => {
   let timeWithoutDestruction = 0;
   const passTime = () => timeWithoutDestruction++;
   const totalPeaceTime = () => timeWithoutDestruction;
   const launch = () => {
     timeWithoutDestruction = -1;
-    return '💥';
-  }
+    return "💥";
+  };
 
   setInterval(passTime, 1000);
-  return {totalPeaceTime}
-}
+  return { totalPeaceTime };
+};
 
 const ww3 = makeNuclearButton();
-ww3.totalPeaceTime()
+ww3.totalPeaceTime();
 ```
 
 In this function, the outside world only can access totalPeaceTime function but they can not reach / use passTime function or launch function. This is what encapsulation does in this case. And this is one of the main benefits of closurer of data encapsulation and it refers to the idea that some data should just not be directly exposed.
 
 Exercise 1: Make this code can only be init once.
 
-```
+```javascript
 let view;
 
-function initialize(){
-  view = '⛰️';
-  console.log('view has been set');
+function initialize() {
+  view = "⛰️";
+  console.log("view has been set");
 }
 ```
 
 Solution for Exercise 1:
 
-```
+```javascript
 let view;
 
-function initialize(){
-let initStatus = 0;
+function initialize() {
+  let initStatus = 0;
 
-return function() {
-  if (initStatus === 0) {
-    view = '⛰️';
-    console.log('view has been set!');
-    initStatus++;
-  }else{
-    console.log('view has been already set!');
-  }
-}
+  return function() {
+    if (initStatus === 0) {
+      view = "⛰️";
+      console.log("view has been set!");
+      initStatus++;
+    } else {
+      console.log("view has been already set!");
+    }
+  };
 }
 
 let init = initialize();
@@ -152,21 +151,21 @@ console.log(view);
 
 Another Solution for Exercise 2:
 
-```
+```javascript
 let view;
-let initialize =  () => {
-      view = '🏔';
-      console.log('view has been set!');
+let initialize = () => {
+  view = "🏔";
+  console.log("view has been set!");
 
-      initialize = () => {
-        console.log('view is already initialized. Aborting..')
-      }
-      return initialize;
-}
+  initialize = () => {
+    console.log("view is already initialized. Aborting..");
+  };
+  return initialize;
+};
 
 initialize(); // view has been set!
 initialize(); // view is already initialized. Aborting..
 initialize(); // view is already initialized. Aborting..
 
-console.log(view)
+console.log(view);
 ```

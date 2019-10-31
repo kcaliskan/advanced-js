@@ -6,25 +6,29 @@
 
 2. Functions are first class citizens in JS. Functions can be assigned to variables and properties of objects.
 
-```
-var stuff = function(){}
+```javascript
+var stuff = function() {};
 ```
 
 3. We can also pass functions as arguments into another function.
 
-```
-function a(fn){
-  fn()
+```javascript
+function a(fn) {
+  fn();
 }
 
-a(function () { console.log('hi there')})
+a(function() {
+  console.log("hi there");
+});
 ```
 
 4. We can return functions as a values from other functions.
 
-```
-function b(){
-return function c() {console.log('bye')}
+```javascript
+function b() {
+  return function c() {
+    console.log("bye");
+  };
 }
 
 var d = b();
