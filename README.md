@@ -1,2 +1,2 @@
 # advanced-js
-Advanced JavaScript
+Advanced JavaScript Book Project
