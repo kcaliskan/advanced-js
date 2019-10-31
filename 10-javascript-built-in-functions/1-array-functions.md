@@ -14,5 +14,5 @@ Meanwhile, the `map()` method will also call a provided function on every elemen
 
 # Sources
 
-- [JavaScript — Map vs. ForEach
-  ](https://codeburst.io/javascript-map-vs-foreach-f38111822c0f)
+- [JavaScript — Map vs. ForEach](https://codeburst.io/javascript-map-vs-foreach-f38111822c0f)
+- [is it possible to change values of the array when doing foreach in javascript?](https://stackoverflow.com/a/31298343)
