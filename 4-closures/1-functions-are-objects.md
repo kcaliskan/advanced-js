@@ -1,6 +1,6 @@
 ## Functions are Objects
 
-1. Functions are a special type of object called "callable" object. Bracket notation () for the invoking the function, contains the code, it hsa and it also has some properties like call, apply and bind.
+1. Functions are a special type of object called "callable" object. Bracket notation () for the invoking the function, contains the code, it has and it also has some properties like `call`, `apply` and `bind`.
 
 ![js-functions-are-objects-1](../img/js-functions-are-objects-1.png)
 

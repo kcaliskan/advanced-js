@@ -1,6 +1,10 @@
 # Closures
 
-1. Closures allow a function to access variables from an enclosing scope or environment event after it leaves the scope in which it was declared.
+1. Closures allow a function to access variables from an enclosing scope or environment even after it leaves the scope in which it was declared.
+
+A closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
+
+Simply put, a closure is the ability of a function to remember the environment in which it was created.
 
 ```javascript
 function a() {
@@ -17,7 +21,7 @@ function a() {
 a()()(); // 'grandpa > father > son'
 ```
 
-Because function c is inside of function a and function b,the JavaScript engine is going to say "allright I'll create a closure for you. All of the variables outside of the function c. I'm going to keep around them if function C is using it."
+Because `function c` is inside of `function a` and `function b`, the JavaScript engine is going to say "Allright, I'll create a closure for you. All of the variables outside of the `function c`. I'm going to keep around them if `function c` is using it."
 
 ```javascript
 function a() {
@@ -35,9 +39,9 @@ function a() {
 a()()(); // 'grandpa > father > son'
 ```
 
-The JavaScript engine isn't going to keep "random" variable when function B is invoked and popped off from the stack because nothing using it, it is not referenced. It will be garbage collected. JavaScript engine is going to keep anything that's still being referenced by a child.
+The JavaScript engine isn't going to keep `random` variable when `function b` is invoked and popped off from the stack because nothing using it, it is not referenced. It will be garbage collected. JavaScript engine is going to keep anything that's still being referenced by a child.
 
-2. Closures are also called lexical scoping. Lexical means where it is written, scoping is what variable we have access. JavaScript engine before we run any code before we get to line twelve or line thirteen already knows which function has access to which variables because JavaScript is lexically scoped (statically scoped).
+2. Closures are also called lexical scoping. Lexical means where it is written, scoping is what variable we have access. JavaScript engine before we run any code get already knows which function has access to which variables. Because JavaScript is lexically scoped (statically scoped).
 
 Exercise:
 
@@ -52,7 +56,7 @@ function callMeMaybe() {
 callMeMaybe();
 ```
 
-We sent "setTimeout" function to the web API to start a timer for four seconds and then once that timer is gone, we sent "console.log" to the callback queue and the callback queue is going to wait there until the call stack is empty. "callMe" variable has technically been popped off the stack by the time "setTimeout" runs but because of closures JavaScript is able to remember "callMe" variable.
+We sent `setTimeout` function to the web API to start a timer for four seconds and then once that timer is gone, we sent `console.log` to the callback queue and the callback queue is going to wait there until the call stack is empty. `callMe` variable has technically been popped off the stack by the time `setTimeout` runs but because of closures JavaScript is able to remember `callMe` variable.
 
 3. Memory Efficient
 
@@ -83,7 +87,7 @@ getHeavyDuty(700);
 getHeavyDuty(800);
 ```
 
-The first heavy duty was created three times vs heavyDutyClosure created only once. In heavyDutyClosure, we were able to create the big array once and because we knew we were going to access it a lot. We just maintain that closure scope over it and we were able to call it over and over without doing all that creation destruction work.
+The first `heavyDuty` was created three times vs `heavyDutyClosure` created only once. In `heavyDutyClosure`, we were able to create the big array once and because we knew we were going to access it a lot. We just maintain that closure scope over it and we were able to call it over and over without doing all that creation destruction work.
 
 4. Encapsulation
 
@@ -109,7 +113,7 @@ const ww3 = makeNuclearButton();
 ww3.totalPeaceTime();
 ```
 
-In this function, the outside world only can access totalPeaceTime function but they can not reach / use passTime function or launch function. This is what encapsulation does in this case. And this is one of the main benefits of closurer of data encapsulation and it refers to the idea that some data should just not be directly exposed.
+In this function, the outside world only can access `totalPeaceTime` function but they can not reach / use `passTime` function or `launch` function. This is what encapsulation does in this case. And this is one of the main benefits of closure of data encapsulation and it refers to the idea that some data should just not be directly exposed.
 
 Exercise 1: Make this code can only be init once.
 
@@ -169,3 +173,8 @@ initialize(); // view is already initialized. Aborting..
 
 console.log(view);
 ```
+
+# Sources
+
+- [Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+- [Simple Explanation of Javascript Closure](https://medium.com/@yasserhussain1110/simple-explanation-of-javascript-closure-101396e678a8)
