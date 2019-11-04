@@ -178,7 +178,8 @@ Our callback function can take four arguments:
 - `index` — the current index of the value being processed
 - `arr` — the original array
 
-Example 1:
+**Note:**
+Example 1: The accumulator accumulates the callback's return values. It is the accumulated value previously returned in the last invocation of the callback, or `initialValue`, if supplied.
 
 ```javascript
 let arr = [1, 2, 3, 4];
@@ -342,6 +343,26 @@ function compareValues(key, order = "asc") {
     return order == "desc" ? comparison * -1 : comparison;
   };
 }
+```
+
+## `concat()`
+
+The `concat()` method is used to join two or more arrays.
+
+This method does not change the existing arrays, but returns a new array, containing the values of the joined arrays.
+
+**Syntax**
+array1.concat(array2, array3, ..., arrayX)
+
+Example 1
+
+```javascript
+var hege = ["Cecilie", "Lone"];
+var stale = ["Emil", "Tobias", "Linus"];
+var kai = ["Robin"];
+var children = hege.concat(stale, kai);
+
+// children["Cecilie", "Lone", "Emil", "Tobias", "Linus", "Robin"]
 ```
 
 # Sources
