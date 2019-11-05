@@ -97,3 +97,132 @@ entry: './app/index.js',
 path: path.resolve(__dirname, 'dist'),
 filename: 'index_bundle.js'
 ```
+
+What does do `css-loader` and `style-loader` what we do with our second rule?
+
+```javascript
+{ test: /\.css$/, use: ['style-loader', 'css-loader'] }
+```
+What the CSS loader does that it's going to look for any CSS or any time that we use something like that `url('./img/background.png')`, it's going to transform that code into just `require('./img/background.png')` syntax.
+
+
+What `style-loader` is going to take the CSS that's being required and insert it into the page directly so that the styles are actually active on that page. Like: `require('index.css')`
+
+**Step 7**:
+
+Add `mode` type which can be `development` our `production` in to the Webpack config file.
+
+```javascript
+mode: 'development',
+```
+
+Our `webpack.config.js` file's final version until this step looks like this:
+
+```javascript
+var path = require('path');
+
+module.exports = {
+  entry: './app/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'index_bundle.js'
+  },
+  module: {
+    rules: [
+      { test: /\.(js)$/, use: 'babel-loader' },
+      { test: /\.css$/, use: ['style-loader', 'css-loader'] }
+    ]
+  },
+  mode: 'development'
+}
+```
+
+**Step 8**:
+
+We need to have an `index.html` file which is going to be just main `index.html` file for our entire application.
+
+`Webpack` will be bundles our entire application under the `dist` folder and the main JavaScript file's name will be `index_bundle.js`. So, it also makes sense to have our main `index.html` file to be under the `dist` folder too. One of the our `devDependencies` called `html-webpack-plugin` is going to allow us to automatically generate a `index.html` file which is then going to include a reference to our `index_bundle.js` file.
+
+How do we accomplish that?
+
+First, we are requireing the `html-webpack-plugin` in the top of the our Webpack config file. (`webpack.config.js`)
+```javascript
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+```
+
+Second, add `html-webpack-plugin` and initiate it. Our config file's final looks like this:
+
+var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+
+```javascript
+module.exports = {
+  entry: './app/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'index_bundle.js'
+  },
+  module: {
+    rules: [
+      { test: /\.(js)$/, use: 'babel-loader' },
+      { test: /\.css$/, use: ['style-loader', 'css-loader'] }
+    ]
+  },
+  mode: 'development',
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'app/index.html'
+    })
+  ]
+}
+```
+
+Create a `index.html` under the App folder:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>First React App Without Create React App</title>
+</head>
+
+<body>
+  <div id="app"></div>
+</body>
+
+</html>
+```
+
+**Step 9**:
+
+We are looking good until now. We are going the tell `babel-loader` to how we want to compose our JavaScript files.
+
+We will use two dependincies for that. They are `@babel/preset-env` and `@babel/preset-react`. 
+
+`@babel/preset-env` is going to take care of converting our ES6 (and newer) features / syntax to the older browsers. So we can use the syntax and features like `Class`.
+
+`@babel/preset-react` is going to tranform the `JSX` to old school `html`.
+
+We need to add these presets to the babel in the `package.json` file, so:
+
+```javascript
+{
+  "name": "first-component-without-cra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  .
+  .
+  .
+```
+When Webpack bundles all of our modules together our code is going to run through `babel` which is then going to compile it based on the `preset-env` and `preset-react`. So then the bundle that we get from Webpack is going to be just a regular JavaScript that all browsers can understand.
