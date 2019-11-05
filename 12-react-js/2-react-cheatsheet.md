@@ -32,7 +32,7 @@ dist // Our production code will be bundles into dist folder so we also don't wa
 
 **Step 4**
 
-Create a folder which will be your main folder for `React` and `components`.
+Create a folder which will be your main folder for `React` and `components`. In this case, I'm going to create a folder called "App" and will refer it to as "App" folder through the article.
 
 Create `index.js` and `index.css` files under the folder which you just created.
 
@@ -41,7 +41,7 @@ Create `index.js` and `index.css` files under the folder which you just created.
 ```javascript
 var React = require('react');
 var ReactDOM = require('react-dom');
-require('index.css');
+require('./index.css');
 
 
 class App extends React.Component {
@@ -152,8 +152,10 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 Second, add `html-webpack-plugin` and initiate it. Our config file's final looks like this:
 
+```javascript
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+```
 
 ```javascript
 module.exports = {
@@ -226,3 +228,179 @@ We need to add these presets to the babel in the `package.json` file, so:
   .
 ```
 When Webpack bundles all of our modules together our code is going to run through `babel` which is then going to compile it based on the `preset-env` and `preset-react`. So then the bundle that we get from Webpack is going to be just a regular JavaScript that all browsers can understand.
+
+**Step 10**:
+
+Now, we are going to create a command to create our first bundle.
+
+Go to `package.json` and delete the `test` under the `"scripts"` and replace it with this
+
+```javascript
+  "scripts": {
+    "create": "webpack"
+  },
+  ```
+
+  Our final version of the `package.json` file should looks like this:
+
+  ```javascript
+  {
+  "name": "first-component-without-cra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "scripts": {
+    "create": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
+```
+
+**Step 10**:
+
+Let's add some styling to our App.
+
+Go to `index.css` file and theeen:
+
+```css
+body {
+  background: green;
+}
+```
+**Step 11**:
+
+Time to magic.
+
+Go to your terminal and run the "npm run create"
+
+Boom!
+
+You did it! Now, you can see the `dist` folder as well as `index_bundle.js`. You can open the `index.html` file in your browser and look at it.
+
+**Step 12**:
+
+We are going to do final touch to the our settings. Right now, our app is not very developer friendly. Because whe we want to run our code, we run `npm run create` command which creates a production bundle for us.
+
+But what if we can run the Webpack live on a localhost and can see the our changes directly in the browser without the hassle everytime with `npm run create`.
+
+We are going to use one of our dependencies for that called `webpack-dev-server`.
+
+Add this to the `scripts` in your `package.json`:
+
+```javascript
+"start": "webpack-dev-server --open"
+```
+
+Let's go to terminal and run the `npm run start`. Magic happens! You start the Webpack live server on your local and you can do changes and also see it on the browser without any disruption.
+
+`package.json` should look like this:
+
+```javascript
+{
+  "name": "first-component-without-cra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "scripts": {
+    "create": "webpack",
+    "start": "webpack-dev-server --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
+```
+
+## What is a `React` component?
+
+![react-cheatsheet-1](img/react-cheatsheet-1.png)
+
+## `return`
+
+Anytime we have a multi-line `JSX` block and if we want to `return` it, we use parentheses. 
+
+```javascript
+const App = () => {
+  return(
+    <div>
+      <p>Yes!</p>
+    </div>
+  )
+}
+```
+
+## JSX vs HTLM
+
+![react-cheatsheet-2](img/react-cheatsheet-2.png)
+
+
+**Styling**
+
+![react-cheatsheet-3](img/react-cheatsheet-3.png)
+First(outer) curly brace indicates that we want to reference a JavaScript variable inside of our JSX.
+
+The second curly brace is meant to indicate a JavaScript object.
+
+**Note**: We are supposed to use double quotes anytime that we want to indicate a string in JSX.
+
+```javascript
+<input id="name" type="text" />
+```
+For any non-JSX property by convention in the JavaScript community traditionally make use of single quotes.
+```javascript
+<button style={{backgroundColor: 'blue', color: 'white'}}> 
+```
+
+At the end of the day there's no difference between them. It is just a style preference.
+
+**class vs className**
+
+```javascript
+<label class="label" for="name">Enter name:</label>
+```

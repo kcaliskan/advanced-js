@@ -10,7 +10,8 @@
     ]
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "create": "webpack",
+    "start": "webpack-dev-server --open"
   },
   "keywords": [],
   "author": "",
