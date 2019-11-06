@@ -445,7 +445,22 @@ Note: For clarity, if anyone cares about the distinction, List.propTypes is not 
 
 ## State in React Components
 
+![react-cheatsheet-9](img/react-cheatsheet-9.png)
+
+How to initiate `state` and update the `state`?
+
+![react-cheatsheet-10](img/react-cheatsheet-10.png)
+
+App Lifecycle
+
+![react-cheatsheet-11](img/react-cheatsheet-11.png)
+
+## Component Lifecycle
+
+![react-cheatsheet-12](img/react-cheatsheet-12.png)
+
 # Sources
 
 [React: PropTypes in stateless functional component](https://stackoverflow.com/questions/45398709/react-proptypes-in-stateless-functional-component)
+
 [React: PropTypes in stateless functional component - Stone Mason](https://stackoverflow.com/questions/45398709/react-proptypes-in-stateless-functional-component#comment99376141_45398732)
