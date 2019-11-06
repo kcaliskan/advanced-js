@@ -25,9 +25,8 @@ Create `.gitignore` files to ignore `node_modules` folder while using git.
 `.gitignore` file:
 
 ```javascript
-node_modules
-.DS_Store // if you use a Mac
-dist // Our production code will be bundles into dist folder so we also don't want dist folder to push our github / git.
+node_modules.DS_Store; // if you use a Mac
+dist; // Our production code will be bundles into dist folder so we also don't want dist folder to push our github / git.
 ```
 
 **Step 4**
@@ -39,20 +38,17 @@ Create `index.js` and `index.css` files under the folder which you just created.
 **`index.js`**:
 
 ```javascript
-var React = require('react');
-var ReactDOM = require('react-dom');
-require('./index.css');
-
+var React = require("react");
+var ReactDOM = require("react-dom");
+require("./index.css");
 
 class App extends React.Component {
   render() {
-    return (
-      <div>Hello World!~</div>
-    )
+    return <div>Hello World!~</div>;
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById("app"));
 ```
 
 **Step 5**
@@ -65,24 +61,24 @@ npm install --save-dev @babel/core @babel/preset-env @babel/preset-react webpack
 
 **Step 6**
 
-What `Webpack` does? 
+What `Webpack` does?
 
-Webpack's main responsibility is that it is a module bundler. An app is generally composed of multiple modules and what Webpack does that takes all of our modules and intelligently combines them into one single file or one single module that you can then reference inside of your `index.html` page 
+Webpack's main responsibility is that it is a module bundler. An app is generally composed of multiple modules and what Webpack does that takes all of our modules and intelligently combines them into one single file or one single module that you can then reference inside of your `index.html` page
 
 Create `webpack.config.js` file under the project's root folder.
 
 **`webpack.config.js`**:
 
 ```javascript
-var path = require('path');
+var path = require("path");
 
 module.exports = {
-  entry: './app/index.js',
+  entry: "./app/index.js",
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'index_bundle.js'
+    path: path.resolve(__dirname, "dist"),
+    filename: "index_bundle.js"
   }
-}
+};
 ```
 
 We are indicating our entry point for Webpack. It is generally the main `App.js` file, in this case we called it `index.js`.
@@ -91,7 +87,7 @@ We are indicating our entry point for Webpack. It is generally the main `App.js`
 entry: './app/index.js',
 ```
 
-  Webpack will be look up through our entry file and then compose the bundles together and finally will create a bundle js file for production use. We tell the Webpack to where to create this JavaScript file and what it's will be called.
+Webpack will be look up through our entry file and then compose the bundles together and finally will create a bundle js file for production use. We tell the Webpack to where to create this JavaScript file and what it's will be called.
 
 ```javascript
 path: path.resolve(__dirname, 'dist'),
@@ -103,8 +99,8 @@ What does do `css-loader` and `style-loader` what we do with our second rule?
 ```javascript
 { test: /\.css$/, use: ['style-loader', 'css-loader'] }
 ```
-What the CSS loader does that it's going to look for any CSS or any time that we use something like that `url('./img/background.png')`, it's going to transform that code into just `require('./img/background.png')` syntax.
 
+What the CSS loader does that it's going to look for any CSS or any time that we use something like that `url('./img/background.png')`, it's going to transform that code into just `require('./img/background.png')` syntax.
 
 What `style-loader` is going to take the CSS that's being required and insert it into the page directly so that the styles are actually active on that page. Like: `require('index.css')`
 
@@ -119,22 +115,22 @@ mode: 'development',
 Our `webpack.config.js` file's final version until this step looks like this:
 
 ```javascript
-var path = require('path');
+var path = require("path");
 
 module.exports = {
-  entry: './app/index.js',
+  entry: "./app/index.js",
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'index_bundle.js'
+    path: path.resolve(__dirname, "dist"),
+    filename: "index_bundle.js"
   },
   module: {
     rules: [
-      { test: /\.(js)$/, use: 'babel-loader' },
-      { test: /\.css$/, use: ['style-loader', 'css-loader'] }
+      { test: /\.(js)$/, use: "babel-loader" },
+      { test: /\.css$/, use: ["style-loader", "css-loader"] }
     ]
   },
-  mode: 'development'
-}
+  mode: "development"
+};
 ```
 
 **Step 8**:
@@ -146,37 +142,38 @@ We need to have an `index.html` file which is going to be just main `index.html`
 How do we accomplish that?
 
 First, we are requireing the `html-webpack-plugin` in the top of the our Webpack config file. (`webpack.config.js`)
+
 ```javascript
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+var HtmlWebpackPlugin = require("html-webpack-plugin");
 ```
 
 Second, add `html-webpack-plugin` and initiate it. Our config file's final looks like this:
 
 ```javascript
-var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require("path");
+var HtmlWebpackPlugin = require("html-webpack-plugin");
 ```
 
 ```javascript
 module.exports = {
-  entry: './app/index.js',
+  entry: "./app/index.js",
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'index_bundle.js'
+    path: path.resolve(__dirname, "dist"),
+    filename: "index_bundle.js"
   },
   module: {
     rules: [
-      { test: /\.(js)$/, use: 'babel-loader' },
-      { test: /\.css$/, use: ['style-loader', 'css-loader'] }
+      { test: /\.(js)$/, use: "babel-loader" },
+      { test: /\.css$/, use: ["style-loader", "css-loader"] }
     ]
   },
-  mode: 'development',
+  mode: "development",
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'app/index.html'
+      template: "app/index.html"
     })
   ]
-}
+};
 ```
 
 Create a `index.html` under the App folder:
@@ -184,18 +181,16 @@ Create a `index.html` under the App folder:
 ```html
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>First React App Without Create React App</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>First React App Without Create React App</title>
-</head>
-
-<body>
-  <div id="app"></div>
-</body>
-
+  <body>
+    <div id="app"></div>
+  </body>
 </html>
 ```
 
@@ -203,7 +198,7 @@ Create a `index.html` under the App folder:
 
 We are looking good until now. We are going the tell `babel-loader` to how we want to compose our JavaScript files.
 
-We will use two dependincies for that. They are `@babel/preset-env` and `@babel/preset-react`. 
+We will use two dependincies for that. They are `@babel/preset-env` and `@babel/preset-react`.
 
 `@babel/preset-env` is going to take care of converting our ES6 (and newer) features / syntax to the older browsers. So we can use the syntax and features like `Class`.
 
@@ -227,6 +222,7 @@ We need to add these presets to the babel in the `package.json` file, so:
   .
   .
 ```
+
 When Webpack bundles all of our modules together our code is going to run through `babel` which is then going to compile it based on the `preset-env` and `preset-react`. So then the bundle that we get from Webpack is going to be just a regular JavaScript that all browsers can understand.
 
 **Step 10**:
@@ -239,44 +235,44 @@ Go to `package.json` and delete the `test` under the `"scripts"` and replace it 
   "scripts": {
     "create": "webpack"
   },
-  ```
+```
 
-  Our final version of the `package.json` file should looks like this:
+Our final version of the `package.json` file should looks like this:
 
-  ```javascript
-  {
-  "name": "first-component-without-cra",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ]
-  },
-  "scripts": {
-    "create": "webpack"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/preset-env": "^7.6.3",
-    "@babel/preset-react": "^7.6.3",
-    "babel-loader": "^8.0.6",
-    "css-loader": "^3.2.0",
-    "html-webpack-plugin": "^3.2.0",
-    "style-loader": "^1.0.0",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0"
-  }
+```javascript
+{
+"name": "first-component-without-cra",
+"version": "1.0.0",
+"description": "",
+"main": "index.js",
+"babel": {
+  "presets": [
+    "@babel/preset-env",
+    "@babel/preset-react"
+  ]
+},
+"scripts": {
+  "create": "webpack"
+},
+"keywords": [],
+"author": "",
+"license": "ISC",
+"dependencies": {
+  "react": "^16.11.0",
+  "react-dom": "^16.11.0"
+},
+"devDependencies": {
+  "@babel/core": "^7.6.4",
+  "@babel/preset-env": "^7.6.3",
+  "@babel/preset-react": "^7.6.3",
+  "babel-loader": "^8.0.6",
+  "css-loader": "^3.2.0",
+  "html-webpack-plugin": "^3.2.0",
+  "style-loader": "^1.0.0",
+  "webpack": "^4.41.2",
+  "webpack-cli": "^3.3.10",
+  "webpack-dev-server": "^3.9.0"
+}
 }
 ```
 
@@ -291,6 +287,7 @@ body {
   background: green;
 }
 ```
+
 **Step 11**:
 
 Time to magic.
@@ -363,22 +360,21 @@ Let's go to terminal and run the `npm run start`. Magic happens! You start the W
 
 ## `return`
 
-Anytime we have a multi-line `JSX` block and if we want to `return` it, we use parentheses. 
+Anytime we have a multi-line `JSX` block and if we want to `return` it, we use parentheses.
 
 ```javascript
 const App = () => {
-  return(
+  return (
     <div>
       <p>Yes!</p>
     </div>
-  )
-}
+  );
+};
 ```
 
 ## JSX vs HTLM
 
 ![react-cheatsheet-2](img/react-cheatsheet-2.png)
-
 
 **Styling**
 
@@ -392,9 +388,11 @@ The second curly brace is meant to indicate a JavaScript object.
 ```javascript
 <input id="name" type="text" />
 ```
+
 For any non-JSX property by convention in the JavaScript community traditionally make use of single quotes.
+
 ```javascript
-<button style={{backgroundColor: 'blue', color: 'white'}}> 
+<button style={{backgroundColor: 'blue', color: 'white'}}>
 ```
 
 At the end of the day there's no difference between them. It is just a style preference.
@@ -402,5 +400,52 @@ At the end of the day there's no difference between them. It is just a style pre
 **class vs className**
 
 ```javascript
-<label class="label" for="name">Enter name:</label>
+<label class="label" for="name">
+  Enter name:
+</label>
 ```
+
+## Component
+
+![react-cheatsheet-6](img/react-cheatsheet-6.png)
+
+## Communicating with Props
+
+![react-cheatsheet-4](img/react-cheatsheet-4.png)
+
+![react-cheatsheet-5](img/react-cheatsheet-5.png)
+
+## PropTypes
+
+Functional (Stateless) Component
+
+```javascript
+List.PropTypes = {
+  todos: PropTypes.array.isRequired
+};
+```
+
+Class (Stateful) Component
+
+```javascript
+List.propTypes = {
+  todos: PropTypes.array.isRequired
+};
+```
+
+The instance of a PropTypes object is lowercase, but the Class/Type is uppercase. The instance is `List.propTypes`. The Class/Type is `PropTypes`.
+
+Note: For clarity, if anyone cares about the distinction, List.propTypes is not in fact an instance of PropTypes. It's a plain javascript object. In fact, PropTypes isn't even a class: it's also an object. Instance in this answer is not meant in the object-oriented sense.
+
+## Class based component
+
+![react-cheatsheet-7](img/react-cheatsheet-7.png)
+
+![react-cheatsheet-8](img/react-cheatsheet-8.png)
+
+## State in React Components
+
+# Sources
+
+[React: PropTypes in stateless functional component](https://stackoverflow.com/questions/45398709/react-proptypes-in-stateless-functional-component)
+[React: PropTypes in stateless functional component - Stone Mason](https://stackoverflow.com/questions/45398709/react-proptypes-in-stateless-functional-component#comment99376141_45398732)
