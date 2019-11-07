@@ -451,6 +451,29 @@ How to initiate `state` and update the `state`?
 
 ![react-cheatsheet-10](img/react-cheatsheet-10.png)
 
+Initiate a `class` and `state` without a `constuctor`
+
+```javascript
+class App extends React.Component {
+  state = { lat: null, errorMessage: null };
+.
+.
+.
+.
+
+}
+```
+
+is totally same with this:
+
+```javascript
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { lat: null, errorMessage: null };
+  }
+```
+
 App Lifecycle
 
 ![react-cheatsheet-11](img/react-cheatsheet-11.png)
@@ -458,6 +481,40 @@ App Lifecycle
 ## Component Lifecycle
 
 ![react-cheatsheet-12](img/react-cheatsheet-12.png)
+
+**componentDidMount** method only gets invoked one time.
+
+![react-cheatsheet-13](img/react-cheatsheet-13.png)
+
+## defaultProps
+
+If we don't want to send a prop to another component, we can define `defaultProps` inside of the component and it will be used as `prop`
+
+```javascript
+import React from "react";
+
+const Spinner = props => {
+  return (
+    <div className="ui active dimmer">
+      <div className="ui big text loader">{props.message}</div>
+    </div>
+  );
+};
+
+Spinner.defaultProps = {
+  message: "Loading..."
+};
+
+export default Spinner;
+```
+
+If we send a prop while using the `Spinner` component like this:
+
+```javascript
+<Spinner message="Please accept the location request" />
+```
+
+Our custom `prop` will be override to `defaultProp`.
 
 # Sources
 
