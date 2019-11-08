@@ -516,6 +516,40 @@ If we send a prop while using the `Spinner` component like this:
 
 Our custom `prop` will be override to `defaultProp`.
 
+## Event Listeners
+
+![react-cheatsheet-14](img/react-cheatsheet-14.png)
+
+**Uncontrolled vs Controlled Elements**
+
+![react-cheatsheet-15](img/react-cheatsheet-15.png)
+
+Uncontrolled
+
+![react-cheatsheet-16](img/react-cheatsheet-16.png)
+
+Controlled
+
+![react-cheatsheet-17](img/react-cheatsheet-17.png)
+
+![react-cheatsheet-18](img/react-cheatsheet-18.png)
+
+## Invoking Callbacks in Children
+
+Parent Element:
+![react-cheatsheet-19](img/react-cheatsheet-19.png)
+
+Children:
+![react-cheatsheet-20](img/react-cheatsheet-20.png)
+
+## Handling Requests with Async Await
+
+![react-cheatsheet-22](img/react-cheatsheet-22.png)
+
+## The Purpose of Keys in Lists
+
+![react-cheatsheet-21](img/react-cheatsheet-21.png)
+
 # Sources
 
 [React: PropTypes in stateless functional component](https://stackoverflow.com/questions/45398709/react-proptypes-in-stateless-functional-component)
