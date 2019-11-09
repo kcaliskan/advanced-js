@@ -550,6 +550,9 @@ Children:
 
 ![react-cheatsheet-21](img/react-cheatsheet-21.png)
 
+## Redux
+
+
 # Sources
 
 [React: PropTypes in stateless functional component](https://stackoverflow.com/questions/45398709/react-proptypes-in-stateless-functional-component)
