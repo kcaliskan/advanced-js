@@ -128,3 +128,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 98. [Coding Tutorials](https://www.youtube.com/channel/UCiyasqPIZz8zzbJp7-17dJw/videos)
 99. [Coding Garden with CJ](https://www.youtube.com/channel/UCLNgu_OupwoeESgtab33CCw/videos)
 100. [Stefan Mischook](https://www.youtube.com/user/killerphp)
+101. [Potluck Economics](https://www.youtube.com/channel/UC-pBvv8mzLpj0k-RIbc2Nog/videos)
