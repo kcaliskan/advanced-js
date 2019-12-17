@@ -1,10 +1,12 @@
 ## Call Stack (aka Execution Stack)
 
-1. Call stack stores functions and variables.
+1. At the most basic level, the call stack is a data structure that utilizes the Last in, First out(LIFO) principle to store and manage function invocation.
 
-2. It runs in a first in - last out mode.
+2. Call stack stores functions and variables.
 
-3. Call stack is where the engine keeps track of where your code is and it's execution.
+3. It runs in a Last in - Firs out mode (LIFO).
+
+4. Call stack is where the engine keeps track of where your code is and it's execution.
 
 **Stack Overflow**
 
