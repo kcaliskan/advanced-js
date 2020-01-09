@@ -133,3 +133,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 103. [Telmo Sampaio](https://www.youtube.com/user/Telmo87/videos)
 104. [Kevin Powell](https://www.youtube.com/channel/UCJZv4d5rbIKd4QHMPkcABCw)
 105. [LearnWebCode](https://www.youtube.com/user/LearnWebCode/videos)
+106. [Telmo Sampaio](https://www.youtube.com/channel/UCADAkBGiLWIPkCu8D1R1M6g)
