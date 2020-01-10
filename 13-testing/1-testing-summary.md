@@ -31,3 +31,22 @@ The process of applying TDD is itself very simple. You should write code followi
 - As soon as the testing passes, it’s time for refactoring (i.e., improving the code without changing its behavior).
 
 Proponents of TDD claim that by following this process you’ll achieve a simpler design, creating modules that are by definition low coupled and having more confidence to make changes to the code in the future, since you’ll have an automated test suite covering all of the code.
+
+**BDD: Behavior-Driven Development**
+BDD means Behavior-Driven Development and was introduced in 2006 by Dan North. Dan states that BDD evolved as a response to TDD, an attempt to address issues he had when trying to apply the TDD process.
+
+BDD emphasizes the need to include not only software developers but also non-technical people, such as business analysts, in the process of defining the tests. By the way: the term “test” itself isn’t that welcome anymore. Under the light of BDD, we should think of requirements. Requirements should follow the template:
+
+Requirements should follow the template:
+
+- Given some initial context (the givens),
+- When an event occurs,
+- then ensure some outcomes.
+
+## And How Do Unit Testing, TDD, and BDD Relate to Each Other?
+
+How do all of these pieces fit in the puzzle? What are the relationships between all these things?
+
+- Unit testing is a type of automated testing. You can write unit testing without using TDD or BDD, just by writing the tests after the production code.
+- TDD is a software development methodology, in which the developer writes code in very short cycles, always starting with a failing test.
+- BDD can be thought of as a “flavor” of TDD, in which the application’s development is driven by its behavior, described in the forms of human-readable requirements that must be later converted to executable tests.

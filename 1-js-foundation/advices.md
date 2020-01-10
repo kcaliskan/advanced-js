@@ -132,4 +132,10 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 102. [Dummy Codes](https://www.youtube.com/channel/UClkieE3BBB4xXoMvBj7_TRw/videos)
 103. [Telmo Sampaio](https://www.youtube.com/user/Telmo87/videos)
 104. [Kevin Powell](https://www.youtube.com/channel/UCJZv4d5rbIKd4QHMPkcABCw)
+<<<<<<< HEAD
 105. [RaddyTheBrand](https://www.youtube.com/channel/UCvXscyQ0cLzPZeNOeXI45Sw/videos)
+=======
+105. [LearnWebCode](https://www.youtube.com/user/LearnWebCode/videos)
+106. [Telmo Sampaio](https://www.youtube.com/channel/UCADAkBGiLWIPkCu8D1R1M6g)
+107. [RaddyTheBrand](https://www.youtube.com/channel/UCvXscyQ0cLzPZeNOeXI45Sw/videos)
+>>>>>>> 1bcdf77300e1841794118946d96e73244d3e15d4
