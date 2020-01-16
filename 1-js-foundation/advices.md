@@ -137,3 +137,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 107. [Telmo Sampaio](https://www.youtube.com/channel/UCADAkBGiLWIPkCu8D1R1M6g)
 108. [RaddyTheBrand](https://www.youtube.com/channel/UCvXscyQ0cLzPZeNOeXI45Sw/videos)
 109. [IAmTimCorey](https://www.youtube.com/user/IAmTimCorey)
+110. [Brackeys](https://www.youtube.com/user/Brackeys/videos)
