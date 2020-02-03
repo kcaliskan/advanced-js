@@ -144,3 +144,4 @@ Then—and this is extremely important—if you didn’t solve the problem compl
 114. [Corey Schafer](https://www.youtube.com/user/schafer5/videos)
 115. [Caleb Curry](https://www.youtube.com/user/CalebTheVideoMaker2/videos)
 116. [Max Goodridge](https://www.youtube.com/user/Max204204204)
+117. [sentdex](https://www.youtube.com/user/sentdex)
