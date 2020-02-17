@@ -47,11 +47,25 @@ Returns an HTML-like string of the wrapper for debugging purposes. Useful to pri
 
 [.debug([options]) => String](https://airbnb.io/enzyme/docs/api/ShallowWrapper/find.html)
 
-## find(selector)
+## `find(selector)`
 Finds every node in the render tree of the current wrapper that matches the provided selector.
 
 [.find(selector) => ShallowWrapper](https://airbnb.io/enzyme/docs/api/ShallowWrapper/find.html)
 
+## `.state`
+Returns the state hash for the root node of the wrapper. Optionally pass in a prop name and it will return just that value.
+
+[.state([key]) => Any](https://airbnb.io/enzyme/docs/api/ShallowWrapper/state.html)
+
+## `.setState`
+A method to invoke setState() on the root component instance, similar to how you might in the methods of the component, and re-renders. This method is useful for testing your component in hard-to-achieve states, however should be used sparingly.
+
+[.setState(nextState[, callback]) => Self](https://airbnb.io/enzyme/docs/api/ShallowWrapper/setState.html)
+
+## `.simulate`
+Simulate events on the root node in the wrapper. It must be a single-node wrapper.
+
+[.simulate(event[, ...args]) => Self](https://airbnb.io/enzyme/docs/api/ShallowWrapper/simulate.html)
 
 ## Installing Enzyme
 ```javascript
@@ -86,6 +100,25 @@ or
 npm test
 ```
 
+## Using `data-$` in only development env
+You can also use the built in React `process.env.NODE_ENV` variable to conditionally add attributes depending on build mode, no eject needed.
+
+```javascript
+//utils.js
+export const testAttr = val => {
+  return process.env.NODE_ENV === "production" ? {} : { "data-test": val };
+};
+ 
+//App.js
+import { testAttr } from './utils.js'
+function App() {
+  return (
+    <div {...testAttr("component-app")} className="App">
+      <h1>Hello World</h1>
+    </div>
+  );
+}
+```
 # Jest
 
 ## Installing Jest
