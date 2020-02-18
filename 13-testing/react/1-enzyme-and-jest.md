@@ -67,6 +67,20 @@ Simulate events on the root node in the wrapper. It must be a single-node wrappe
 
 [.simulate(event[, ...args]) => Self](https://airbnb.io/enzyme/docs/api/ShallowWrapper/simulate.html)
 
+## `.text()`
+Returns a string of the rendered text of the current render tree. This function should be looked at with skepticism if being used to test what the actual HTML output of the component will be. If that is what you would like to test, use enzyme's render function instead.
+
+[.text() => String](https://airbnb.io/enzyme/docs/api/ShallowWrapper/text.html)
+
+## `update()`
+Syncs the enzyme component tree snapshot with the react component tree. Useful to run before checking the render output if something external may be updating the state of the component somewhere.
+
+NOTE: can only be called on a wrapper instance that is also the root instance.
+
+NOTE: this does not force a re-render. Use wrapper.setProps({}) to force a re-render.
+
+[.update() => Self](https://airbnb.io/enzyme/docs/api/ShallowWrapper/update.html)
+
 ## Installing Enzyme
 ```javascript
 npm install --save-dev enzyme jest-enzyme enzyme-adapter-react-16
@@ -131,9 +145,12 @@ Add the following to the `package.json` file:
 "test": "jest --watch"
 ```
 
+## Common Jest Methods
+
+## `beforeEach`
+If you have some work you need to do repeatedly for many tests, you can use beforeEach and afterEach.
+
+[beforeEachd and afterEach](https://airbnb.io/enzyme/docs/api/ShallowWrapper/update.html)
+
 ## Test Files
 `Jest` looks for file as ending `.test.js` by default. Like: `App.test.js`.
-
-## Assertion
-
-### Expect 
